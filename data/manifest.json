@@ -1,0 +1,263 @@
+[
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "forecast",
+    "city": "karachi",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=24.8607&longitude=67.0011&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&forecast_days=3",
+    "licence": "CC BY 4.0 (confirm on open-meteo.com)",
+    "downloaded_at_utc": "20261019T141452Z",
+    "file": "data\\bronze\\open_meteo\\forecast_karachi_20261019T141452Z.json",
+    "sha256": "4340ebdb0c9d33892cc6bc28e5d0f04935564b2383e8adbb0a0d038c0310f4cb"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "archive",
+    "city": "karachi",
+    "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=24.8607&longitude=67.0011&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&start_date=2021-10-01&end_date=2026-10-10",
+    "licence": "CC BY 4.0 (confirm on open-meteo.com)",
+    "downloaded_at_utc": "20261019T141455Z",
+    "file": "data\\bronze\\open_meteo\\archive_karachi_20261019T141455Z.json",
+    "sha256": "507cddaa392e26e1c3a391d3c6d438b3b0f457f5ec7569666e395eebbb1fa9ed"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "forecast",
+    "city": "lahore",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=31.5497&longitude=74.3436&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&forecast_days=3",
+    "licence": "CC BY 4.0 (confirm on open-meteo.com)",
+    "downloaded_at_utc": "20261019T141456Z",
+    "file": "data\\bronze\\open_meteo\\forecast_lahore_20261019T141456Z.json",
+    "sha256": "58a8b758f655c855dd2b80ce331626a1c35d7362f0a709935b59a25cb4a41227"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "archive",
+    "city": "lahore",
+    "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=31.5497&longitude=74.3436&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&start_date=2021-10-01&end_date=2026-10-10",
+    "licence": "CC BY 4.0 (confirm on open-meteo.com)",
+    "downloaded_at_utc": "20261019T141459Z",
+    "file": "data\\bronze\\open_meteo\\archive_lahore_20261019T141459Z.json",
+    "sha256": "1687dc333c0876e3ade6c33a4e8bdb44ccb85c4f6031753e94859fa949d394ec"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "forecast",
+    "city": "jacobabad",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=28.2769&longitude=68.4514&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&forecast_days=3",
+    "licence": "CC BY 4.0 (confirm on open-meteo.com)",
+    "downloaded_at_utc": "20261019T141501Z",
+    "file": "data\\bronze\\open_meteo\\forecast_jacobabad_20261019T141501Z.json",
+    "sha256": "0d2922e36ebe952b414fd49de4db509e3556d6d0aa8fa3838f9654063f6d65c6"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "archive",
+    "city": "jacobabad",
+    "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=28.2769&longitude=68.4514&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&start_date=2021-10-01&end_date=2026-10-10",
+    "licence": "CC BY 4.0 (confirm on open-meteo.com)",
+    "downloaded_at_utc": "20261019T141504Z",
+    "file": "data\\bronze\\open_meteo\\archive_jacobabad_20261019T141504Z.json",
+    "sha256": "d6b9da4fd899843ae1be373344291e4703aa09062835761f8cb9888ce1df542a"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "karachi",
+    "year": 2021,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=24.8607&longitude=67.0011&start=20210101&end=20211231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143338Z",
+    "file": "data\\bronze\\nasa_power\\power_karachi_2021.json",
+    "sha256": "ac337a26e47629e6f342f23544579fa75bb034a14b4d874128c989cd8c48b636"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "karachi",
+    "year": 2022,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=24.8607&longitude=67.0011&start=20220101&end=20221231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143343Z",
+    "file": "data\\bronze\\nasa_power\\power_karachi_2022.json",
+    "sha256": "028d9b01691f0377f0975fb3fd02a135e2574bc115f4a7dc2c9fdbe793be0d7c"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "karachi",
+    "year": 2023,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=24.8607&longitude=67.0011&start=20230101&end=20231231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143351Z",
+    "file": "data\\bronze\\nasa_power\\power_karachi_2023.json",
+    "sha256": "1828ba1c959ca243fa3bd94c06f38f1997081194a250109d5226e7a2183735ef"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "karachi",
+    "year": 2024,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=24.8607&longitude=67.0011&start=20240101&end=20241231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143358Z",
+    "file": "data\\bronze\\nasa_power\\power_karachi_2024.json",
+    "sha256": "adabc35b0054018c94dc6edc18324fec640b0521789ea4814610d8462e766c38"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "karachi",
+    "year": 2025,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=24.8607&longitude=67.0011&start=20250101&end=20251231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143404Z",
+    "file": "data\\bronze\\nasa_power\\power_karachi_2025.json",
+    "sha256": "9d284a9a96a1008f3be54bdfccef50f3212ffe4c576703f0d5bdd1f920587ea8"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "lahore",
+    "year": 2021,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=31.5497&longitude=74.3436&start=20210101&end=20211231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143412Z",
+    "file": "data\\bronze\\nasa_power\\power_lahore_2021.json",
+    "sha256": "e6111175c89f692a17035f3989cd7749f3507d73b3b34b3f22ec04aa15ee9df7"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "lahore",
+    "year": 2022,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=31.5497&longitude=74.3436&start=20220101&end=20221231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143417Z",
+    "file": "data\\bronze\\nasa_power\\power_lahore_2022.json",
+    "sha256": "5e06f9a277e9888947cc5d2b54a2282e3ba3c8b58b86afa61dd5521897beb856"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "lahore",
+    "year": 2023,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=31.5497&longitude=74.3436&start=20230101&end=20231231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143423Z",
+    "file": "data\\bronze\\nasa_power\\power_lahore_2023.json",
+    "sha256": "f197665d616f9bf76d36f4d2bbdd039678f0d75c4a881c5a42cac2c8bd8f3598"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "lahore",
+    "year": 2024,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=31.5497&longitude=74.3436&start=20240101&end=20241231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143428Z",
+    "file": "data\\bronze\\nasa_power\\power_lahore_2024.json",
+    "sha256": "e5503203cb35457c25746284d15a7d565e0951a49753fad40b8323947f0587ab"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "lahore",
+    "year": 2025,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=31.5497&longitude=74.3436&start=20250101&end=20251231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143433Z",
+    "file": "data\\bronze\\nasa_power\\power_lahore_2025.json",
+    "sha256": "8baad83d2e261aef8ea47fe35dc229873e158a6504e68dd8c15eb1d3f1a3597b"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "jacobabad",
+    "year": 2021,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=28.2769&longitude=68.4514&start=20210101&end=20211231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143439Z",
+    "file": "data\\bronze\\nasa_power\\power_jacobabad_2021.json",
+    "sha256": "a3e013b1144efe9b687785b72a78b001ffac255102cd75818ada79604c0ec647"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "jacobabad",
+    "year": 2022,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=28.2769&longitude=68.4514&start=20220101&end=20221231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143445Z",
+    "file": "data\\bronze\\nasa_power\\power_jacobabad_2022.json",
+    "sha256": "b27cbd18117b2db458a1a4f77504426c823e42b51ac1e38b1e3bb78c67b505e5"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "jacobabad",
+    "year": 2023,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=28.2769&longitude=68.4514&start=20230101&end=20231231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143451Z",
+    "file": "data\\bronze\\nasa_power\\power_jacobabad_2023.json",
+    "sha256": "8ad88013bd003bba859ffdf6f71dfbb8f3eb95475938c3144a8282d2c011ef7a"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "jacobabad",
+    "year": 2024,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=28.2769&longitude=68.4514&start=20240101&end=20241231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143456Z",
+    "file": "data\\bronze\\nasa_power\\power_jacobabad_2024.json",
+    "sha256": "1437d0863f4623621fd0191724a1d1d55609e2553fe6c996d5eaf9663aa3e87a"
+  },
+  {
+    "source": "NASA POWER",
+    "publisher": "NASA Langley Research Center (POWER project)",
+    "city": "jacobabad",
+    "year": 2025,
+    "request_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CT2MDEW%2CWS10M&community=RE&latitude=28.2769&longitude=68.4514&start=20250101&end=20251231&format=JSON&time-standard=UTC",
+    "licence": "Refer to NASA POWER official documentation and applicable data-use terms: https://power.larc.nasa.gov/docs/ Specific terms must be verified before redistribution.",
+    "downloaded_at_utc": "20261019T143502Z",
+    "file": "data\\bronze\\nasa_power\\power_jacobabad_2025.json",
+    "sha256": "65cadbd2e5c1d2b8c5e7b79bc10e0b338360571eb0ddd34d5a8dc591c514614f"
+  },
+  {
+    "source": "Official heatwave document",
+    "publisher": "National Disaster Management Authority (NDMA), Pakistan",
+    "title": "ndma_heatwave_advisory_apr2025",
+    "page_url": "https://mocc.gov.pk/SiteImage/Misc/files/NDMA%20Heatwave%20Advisory%20(25%20April%202025)%20Final.pdf",
+    "licence": "No open licence verified. Consult the original publisher's terms and use the document with appropriate attribution.",
+    "downloaded_at_utc": "20261019T143509Z",
+    "file": "data\\bronze\\documents\\ndma_heatwave_advisory_apr2025.pdf",
+    "sha256": "7c633ac9e3863fce71f881ea0b906ba5fcc1636ff93bd62ab092d01f8e17a151"
+  },
+  {
+    "source": "Official heatwave document",
+    "publisher": "Provincial Disaster Management Authority (PDMA), Sindh",
+    "title": "pdma_sindh_heatwave_sops",
+    "page_url": "https://pdma.gos.pk/Documents/Reports/SOPs_Heatwave_Management_Sindh.pdf",
+    "licence": "No open licence verified. Consult the original publisher's terms and use the document with appropriate attribution.",
+    "downloaded_at_utc": "20261019T143512Z",
+    "file": "data\\bronze\\documents\\pdma_sindh_heatwave_sops.pdf",
+    "sha256": "e4dc40e0fca37f3412e90bfcc9f9d355454d5f9a01f0cd563db379dfe9da4376"
+  },
+  {
+    "source": "Official heatwave document",
+    "publisher": "Provincial Disaster Management Authority (PDMA), Sindh",
+    "title": "pdma_sindh_heatwave_alert_may2025",
+    "page_url": "https://pdma.gos.pk/Documents/Heatwave/Heatwave_2025/Heatwave_Alert_2025/Heatwave%20Alert%20Dated%2015-05-2025.pdf",
+    "licence": "No open licence verified. Consult the original publisher's terms and use the document with appropriate attribution.",
+    "downloaded_at_utc": "20261019T143516Z",
+    "file": "data\\bronze\\documents\\pdma_sindh_heatwave_alert_may2025.pdf",
+    "sha256": "136b062051d27287422ccfa46f850a5dd9ab1db36e7d0c1b49a90793ac116607"
+  }
+]

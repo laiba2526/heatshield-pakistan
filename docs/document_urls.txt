@@ -1,0 +1,3 @@
+ndma_heatwave_advisory_apr2025|https://mocc.gov.pk/SiteImage/Misc/files/NDMA%20Heatwave%20Advisory%20(25%20April%202025)%20Final.pdf
+pdma_sindh_heatwave_sops|https://pdma.gos.pk/Documents/Reports/SOPs_Heatwave_Management_Sindh.pdf
+pdma_sindh_heatwave_alert_may2025|https://pdma.gos.pk/Documents/Heatwave/Heatwave_2025/Heatwave_Alert_2025/Heatwave%20Alert%20Dated%2015-05-2025.pdf
