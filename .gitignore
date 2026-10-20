@@ -1,23 +1,29 @@
 # Python cache
-
-**pycache**/
+__pycache__/
 *.py[cod]
+.pytest_cache/
 
 # Virtual environments
-
 .venv/
 venv/
 env/
 
 # Secrets
-
 .env
 .env.*
 !.env.example
 
-# Temporary files
+# Pipeline scratch space (candidate outputs of failed runs, rollback copies, run lock)
+data/_staging/
+data/_archive/
+data/status/.pipeline.lock
 
+
+# Temporary files
 *.log
 *.tmp
 .DS_Store
 Thumbs.db
+
+# RAG index: rebuilt by `make -C src rag` (contains document text; see docs/sources.md)
+data/rag/chunks.jsonl

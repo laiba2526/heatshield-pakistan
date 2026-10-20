@@ -1,0 +1,1681 @@
+{
+  "thresholds": {
+    "floor_score": 0.02,
+    "min_score": 0.12,
+    "max_missing_key_terms": 1,
+    "tuned_on": "dev split: 18 answerable + 10 unsupported questions",
+    "dev_balanced_accuracy": 0.8722
+  },
+  "dev": {
+    "metrics": {
+      "answerable_questions": 18,
+      "unsupported_questions": 10,
+      "data_questions": 2,
+      "retrieval_hit_at_1": 0.8333333333333334,
+      "retrieval_hit_at_3": 1.0,
+      "answer_rate_on_answerable": 0.9444444444444444,
+      "false_refusal_rate": 0.05555555555555558,
+      "keyword_hit_rate": 0.8888888888888888,
+      "citation_precision": 0.675,
+      "correct_refusal_rate_on_unsupported": 0.8,
+      "idk_balanced_accuracy": 0.8722222222222222,
+      "data_questions_correct_row_ids": 1.0
+    },
+    "rows": [
+      {
+        "id": "A01",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What time of day should people avoid direct sunlight during a heatwave?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p3-c3"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A03",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should I do if I feel dizziness or nausea in the heat?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p4-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A05",
+        "split": "dev",
+        "type": "answerable",
+        "question": "How can I keep my home cooler during a heatwave?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p3-c3",
+          "ndma_heatwave_advisory_apr2025#p4-c1",
+          "pdma_sindh_heatwave_sops#p18-c3"
+        ],
+        "citations_on_expected_page": 3
+      },
+      {
+        "id": "A07",
+        "split": "dev",
+        "type": "answerable",
+        "question": "For which dates did the NDMA April 2025 advisory predict heatwave conditions?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p1-c1",
+          "ndma_heatwave_advisory_apr2025#p1-c2"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A09",
+        "split": "dev",
+        "type": "answerable",
+        "question": "Which districts were warned of maximum temperatures 5 to 7 degrees above normal in the May 2025 heatwave alert?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_alert_may2025#p3-c1",
+          "pdma_sindh_heatwave_alert_may2025#p1-c1",
+          "ndma_heatwave_advisory_apr2025#p1-c1"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A11",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should schools do when a heatwave hits?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p2-c2",
+          "pdma_sindh_heatwave_sops#p14-c5",
+          "pdma_sindh_heatwave_sops#p13-c1",
+          "pdma_sindh_heatwave_sops#p15-c1"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A13",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should ambulances carry for heatstroke patients?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p16-c1",
+          "pdma_sindh_heatwave_sops#p16-c2",
+          "pdma_sindh_heatwave_sops#p17-c3"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A15",
+        "split": "dev",
+        "type": "answerable",
+        "question": "How many heat-related cases and deaths did Karachi report in 2024?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p7-c1",
+          "pdma_sindh_heatwave_sops#p5-c1",
+          "pdma_sindh_heatwave_sops#p6-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A17",
+        "split": "dev",
+        "type": "answerable",
+        "question": "Which factors are making heatwaves worse in Sindh?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p6-c1",
+          "pdma_sindh_heatwave_sops#p5-c2",
+          "pdma_sindh_heatwave_sops#p3-c2"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A19",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should the Karachi Metropolitan Corporation do during a heatwave response?",
+        "answered": true,
+        "hit@1": false,
+        "hit@3": true,
+        "keyword_hit": false,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p17-c1",
+          "pdma_sindh_heatwave_sops#p16-c6"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A21",
+        "split": "dev",
+        "type": "answerable",
+        "question": "Who is most vulnerable to heatwaves?",
+        "answered": true,
+        "hit@1": false,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p12-c3",
+          "pdma_sindh_heatwave_sops#p3-c1",
+          "pdma_sindh_heatwave_sops#p4-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A23",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should community members store at home before a heatwave?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p18-c3"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A25",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should traffic police do during heatwaves?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p15-c6",
+          "pdma_sindh_heatwave_sops#p15-c5",
+          "pdma_sindh_heatwave_sops#p17-c3"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A27",
+        "split": "dev",
+        "type": "answerable",
+        "question": "Where should hydration corners or water booths be set up?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p4-c3"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A29",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should I do if I feel dizzy in the heat?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p4-c1",
+          "ndma_heatwave_advisory_apr2025#p3-c1",
+          "pdma_sindh_heatwave_sops#p15-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A30",
+        "split": "dev",
+        "type": "answerable",
+        "question": "tips for staying safe in a heatwave",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p15-c1",
+          "pdma_sindh_heatwave_sops#p15-c4",
+          "ndma_heatwave_advisory_apr2025#p4-c3"
+        ],
+        "citations_on_expected_page": 3
+      },
+      {
+        "id": "A31",
+        "split": "dev",
+        "type": "answerable",
+        "question": "Is it safe to travel by car during a heatwave?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p4-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A32",
+        "split": "dev",
+        "type": "answerable",
+        "question": "How should farmers look after livestock in the heat?",
+        "answered": false,
+        "hit@1": false,
+        "hit@3": true,
+        "keyword_hit": false,
+        "citations": [],
+        "citations_on_expected_page": 0
+      },
+      {
+        "id": "U01",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "What is the capital of France?",
+        "refused": true,
+        "top": {
+          "chunk_id": "ndma_heatwave_advisory_apr2025#p2-c2",
+          "score": 0.037,
+          "coverage": 0.0,
+          "missing_key_terms": [
+            "capit",
+            "franc"
+          ]
+        }
+      },
+      {
+        "id": "U03",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "What is the official temperature threshold PMD uses to declare a heatwave?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p9-c3",
+          "score": 0.185,
+          "coverage": 0.5,
+          "missing_key_terms": [
+            "decla",
+            "thres",
+            "uses"
+          ]
+        }
+      },
+      {
+        "id": "U05",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "What is the population of Jacobabad?",
+        "refused": false,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p7-c1",
+          "score": 0.17,
+          "coverage": 1.0,
+          "missing_key_terms": []
+        }
+      },
+      {
+        "id": "U07",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "What are the heatwave SOPs for Punjab province?",
+        "refused": false,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_alert_may2025#p1-c2",
+          "score": 0.125,
+          "coverage": 0.75,
+          "missing_key_terms": []
+        }
+      },
+      {
+        "id": "U09",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "Write me a poem about summer.",
+        "refused": true,
+        "top": {
+          "chunk_id": "ndma_heatwave_advisory_apr2025#p4-c2",
+          "score": 0.114,
+          "coverage": 0.33,
+          "missing_key_terms": [
+            "poem",
+            "write"
+          ]
+        }
+      },
+      {
+        "id": "U11",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "How is climate change affecting glaciers in Antarctica?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p3-c1",
+          "score": 0.159,
+          "coverage": 0.6,
+          "missing_key_terms": [
+            "antar",
+            "glaci"
+          ]
+        }
+      },
+      {
+        "id": "U13",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "Which air conditioner brand is the most energy efficient?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p11-c1",
+          "score": 0.187,
+          "coverage": 0.4,
+          "missing_key_terms": [
+            "air",
+            "brand"
+          ]
+        }
+      },
+      {
+        "id": "U15",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "What is the exact heat index formula used by the US National Weather Service?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p6-c1",
+          "score": 0.122,
+          "coverage": 0.25,
+          "missing_key_terms": [
+            "exact",
+            "formu",
+            "natio",
+            "used"
+          ]
+        }
+      },
+      {
+        "id": "U16",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "Which hospital in Karachi has the most beds?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p10-c4",
+          "score": 0.118,
+          "coverage": 0.33,
+          "missing_key_terms": [
+            "beds"
+          ]
+        }
+      },
+      {
+        "id": "U17",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "When will the monsoon start in Lahore this year?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p7-c2",
+          "score": 0.088,
+          "coverage": 0.25,
+          "missing_key_terms": [
+            "lahor",
+            "start"
+          ]
+        }
+      },
+      {
+        "id": "D01",
+        "split": "dev",
+        "type": "data",
+        "question": "What was the maximum heat index in Karachi on 2024-06-24?",
+        "cited_rows": [
+          "karachi-20240624"
+        ],
+        "correct": true
+      },
+      {
+        "id": "D03",
+        "split": "dev",
+        "type": "data",
+        "question": "Heat index in Jacobabad on 2024-05-26?",
+        "cited_rows": [
+          "jacobabad-20240526"
+        ],
+        "correct": true
+      }
+    ]
+  },
+  "test": {
+    "metrics": {
+      "answerable_questions": 14,
+      "unsupported_questions": 7,
+      "data_questions": 3,
+      "retrieval_hit_at_1": 0.9285714285714286,
+      "retrieval_hit_at_3": 1.0,
+      "answer_rate_on_answerable": 1.0,
+      "false_refusal_rate": 0.0,
+      "keyword_hit_rate": 0.9285714285714286,
+      "citation_precision": 0.7142857142857143,
+      "correct_refusal_rate_on_unsupported": 1.0,
+      "idk_balanced_accuracy": 1.0,
+      "data_questions_correct_row_ids": 1.0
+    },
+    "rows": [
+      {
+        "id": "A02",
+        "split": "test",
+        "type": "answerable",
+        "question": "What kind of clothing is recommended in a heatwave?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p18-c4",
+          "pdma_sindh_heatwave_sops#p9-c3",
+          "ndma_heatwave_advisory_apr2025#p4-c1"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A04",
+        "split": "test",
+        "type": "answerable",
+        "question": "Which emergency supplies should PDMAs and DDMAs stockpile?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p3-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A06",
+        "split": "test",
+        "type": "answerable",
+        "question": "What vehicle checks are advised before travelling in summer heat?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p4-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A08",
+        "split": "test",
+        "type": "answerable",
+        "question": "How much above normal were day temperatures expected in Sindh in late April 2025?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p1-c1",
+          "ndma_heatwave_advisory_apr2025#p1-c2"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A10",
+        "split": "test",
+        "type": "answerable",
+        "question": "What maximum temperature did PMD forecast for Karachi on 16 May 2025?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_alert_may2025#p3-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A12",
+        "split": "test",
+        "type": "answerable",
+        "question": "What should employers do to protect outdoor workers from heat?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p13-c4",
+          "pdma_sindh_heatwave_sops#p13-c5"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A14",
+        "split": "test",
+        "type": "answerable",
+        "question": "What is the role of the Pakistan Meteorological Department in heatwave management?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p9-c4",
+          "pdma_sindh_heatwave_sops#p8-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A16",
+        "split": "test",
+        "type": "answerable",
+        "question": "Why does high humidity make heatwaves more dangerous?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p6-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A18",
+        "split": "test",
+        "type": "answerable",
+        "question": "How high have temperatures been in Jacobabad and other Upper Sindh cities?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": false,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p4-c1",
+          "pdma_sindh_heatwave_sops#p5-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A20",
+        "split": "test",
+        "type": "answerable",
+        "question": "How does the Health Department prepare hospitals for heatwaves?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p10-c4",
+          "pdma_sindh_heatwave_sops#p10-c2",
+          "ndma_heatwave_advisory_apr2025#p2-c1"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A22",
+        "split": "test",
+        "type": "answerable",
+        "question": "What should electricity companies do during extreme heat?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p12-c5",
+          "pdma_sindh_heatwave_sops#p12-c4"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A24",
+        "split": "test",
+        "type": "answerable",
+        "question": "Which heat-related illnesses do the Sindh SOPs list?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p6-c2",
+          "pdma_sindh_heatwave_sops#p16-c1",
+          "pdma_sindh_heatwave_sops#p10-c2",
+          "pdma_sindh_heatwave_sops#p14-c5"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A26",
+        "split": "test",
+        "type": "answerable",
+        "question": "What safety messages should the Information Department broadcast in a heatwave?",
+        "answered": true,
+        "hit@1": false,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p14-c7",
+          "pdma_sindh_heatwave_sops#p15-c2",
+          "pdma_sindh_heatwave_sops#p15-c3"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A28",
+        "split": "test",
+        "type": "answerable",
+        "question": "How hot did Karachi get during the 2015 and 2024 heatwaves?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p5-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "U02",
+        "split": "test",
+        "type": "unsupported",
+        "question": "Who won the cricket world cup in 2023?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p3-c2",
+          "score": 0.082,
+          "coverage": 0.2,
+          "missing_key_terms": [
+            "crick",
+            "cup",
+            "won",
+            "world"
+          ]
+        }
+      },
+      {
+        "id": "U04",
+        "split": "test",
+        "type": "unsupported",
+        "question": "What dose of paracetamol should be given for heatstroke?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p16-c1",
+          "score": 0.129,
+          "coverage": 0.25,
+          "missing_key_terms": [
+            "dose",
+            "given",
+            "parac"
+          ]
+        }
+      },
+      {
+        "id": "U06",
+        "split": "test",
+        "type": "unsupported",
+        "question": "How do I apply for a Pakistani passport?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p9-c2",
+          "score": 0.042,
+          "coverage": 0.0,
+          "missing_key_terms": [
+            "apply",
+            "pakis",
+            "passp"
+          ]
+        }
+      },
+      {
+        "id": "U08",
+        "split": "test",
+        "type": "unsupported",
+        "question": "What is the Rescue 1122 phone number in Lahore?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p16-c3",
+          "score": 0.116,
+          "coverage": 0.4,
+          "missing_key_terms": [
+            "phone"
+          ]
+        }
+      },
+      {
+        "id": "U10",
+        "split": "test",
+        "type": "unsupported",
+        "question": "What is the share price of K-Electric?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p12-c3",
+          "score": 0.112,
+          "coverage": 0.33,
+          "missing_key_terms": [
+            "price"
+          ]
+        }
+      },
+      {
+        "id": "U12",
+        "split": "test",
+        "type": "unsupported",
+        "question": "What did the NDMA heatwave advisory of June 2026 say?",
+        "refused": true,
+        "top": {
+          "chunk_id": "ndma_heatwave_advisory_apr2025#p1-c1",
+          "score": 0.121,
+          "coverage": 0.6,
+          "missing_key_terms": [
+            "2026"
+          ]
+        }
+      },
+      {
+        "id": "U14",
+        "split": "test",
+        "type": "unsupported",
+        "question": "What compensation does the government pay to families of heatwave victims?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_alert_may2025#p1-c4",
+          "score": 0.133,
+          "coverage": 0.17,
+          "missing_key_terms": [
+            "compe",
+            "pay",
+            "victi"
+          ]
+        }
+      },
+      {
+        "id": "D02",
+        "split": "test",
+        "type": "data",
+        "question": "What was the heat index in Lahore on 2025-05-30?",
+        "cited_rows": [
+          "lahore-20250530"
+        ],
+        "correct": true
+      },
+      {
+        "id": "D04",
+        "split": "test",
+        "type": "data",
+        "question": "What is the heat risk in Jacobabad tomorrow?",
+        "cited_rows": [
+          "pred-jacobabad-20261021-h2",
+          "nwp-jacobabad-20261021-20261020T110538Z"
+        ],
+        "correct": true
+      },
+      {
+        "id": "D05",
+        "split": "test",
+        "type": "data",
+        "question": "Which city is hottest today?",
+        "cited_rows": [
+          "pred-karachi-20261020-h1",
+          "nwp-karachi-20261020-20261020T110536Z",
+          "pred-lahore-20261020-h1",
+          "nwp-lahore-20261020-20261020T110537Z",
+          "pred-jacobabad-20261020-h1",
+          "nwp-jacobabad-20261020-20261020T110538Z"
+        ],
+        "correct": true
+      }
+    ]
+  },
+  "all": {
+    "metrics": {
+      "answerable_questions": 32,
+      "unsupported_questions": 17,
+      "data_questions": 5,
+      "retrieval_hit_at_1": 0.875,
+      "retrieval_hit_at_3": 1.0,
+      "answer_rate_on_answerable": 0.96875,
+      "false_refusal_rate": 0.03125,
+      "keyword_hit_rate": 0.90625,
+      "citation_precision": 0.6911764705882353,
+      "correct_refusal_rate_on_unsupported": 0.8823529411764706,
+      "idk_balanced_accuracy": 0.9255514705882353,
+      "data_questions_correct_row_ids": 1.0
+    },
+    "rows": [
+      {
+        "id": "A01",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What time of day should people avoid direct sunlight during a heatwave?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p3-c3"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A02",
+        "split": "test",
+        "type": "answerable",
+        "question": "What kind of clothing is recommended in a heatwave?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p18-c4",
+          "pdma_sindh_heatwave_sops#p9-c3",
+          "ndma_heatwave_advisory_apr2025#p4-c1"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A03",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should I do if I feel dizziness or nausea in the heat?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p4-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A04",
+        "split": "test",
+        "type": "answerable",
+        "question": "Which emergency supplies should PDMAs and DDMAs stockpile?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p3-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A05",
+        "split": "dev",
+        "type": "answerable",
+        "question": "How can I keep my home cooler during a heatwave?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p3-c3",
+          "ndma_heatwave_advisory_apr2025#p4-c1",
+          "pdma_sindh_heatwave_sops#p18-c3"
+        ],
+        "citations_on_expected_page": 3
+      },
+      {
+        "id": "A06",
+        "split": "test",
+        "type": "answerable",
+        "question": "What vehicle checks are advised before travelling in summer heat?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p4-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A07",
+        "split": "dev",
+        "type": "answerable",
+        "question": "For which dates did the NDMA April 2025 advisory predict heatwave conditions?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p1-c1",
+          "ndma_heatwave_advisory_apr2025#p1-c2"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A08",
+        "split": "test",
+        "type": "answerable",
+        "question": "How much above normal were day temperatures expected in Sindh in late April 2025?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p1-c1",
+          "ndma_heatwave_advisory_apr2025#p1-c2"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A09",
+        "split": "dev",
+        "type": "answerable",
+        "question": "Which districts were warned of maximum temperatures 5 to 7 degrees above normal in the May 2025 heatwave alert?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_alert_may2025#p3-c1",
+          "pdma_sindh_heatwave_alert_may2025#p1-c1",
+          "ndma_heatwave_advisory_apr2025#p1-c1"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A10",
+        "split": "test",
+        "type": "answerable",
+        "question": "What maximum temperature did PMD forecast for Karachi on 16 May 2025?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_alert_may2025#p3-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A11",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should schools do when a heatwave hits?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p2-c2",
+          "pdma_sindh_heatwave_sops#p14-c5",
+          "pdma_sindh_heatwave_sops#p13-c1",
+          "pdma_sindh_heatwave_sops#p15-c1"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A12",
+        "split": "test",
+        "type": "answerable",
+        "question": "What should employers do to protect outdoor workers from heat?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p13-c4",
+          "pdma_sindh_heatwave_sops#p13-c5"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A13",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should ambulances carry for heatstroke patients?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p16-c1",
+          "pdma_sindh_heatwave_sops#p16-c2",
+          "pdma_sindh_heatwave_sops#p17-c3"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A14",
+        "split": "test",
+        "type": "answerable",
+        "question": "What is the role of the Pakistan Meteorological Department in heatwave management?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p9-c4",
+          "pdma_sindh_heatwave_sops#p8-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A15",
+        "split": "dev",
+        "type": "answerable",
+        "question": "How many heat-related cases and deaths did Karachi report in 2024?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p7-c1",
+          "pdma_sindh_heatwave_sops#p5-c1",
+          "pdma_sindh_heatwave_sops#p6-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A16",
+        "split": "test",
+        "type": "answerable",
+        "question": "Why does high humidity make heatwaves more dangerous?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p6-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A17",
+        "split": "dev",
+        "type": "answerable",
+        "question": "Which factors are making heatwaves worse in Sindh?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p6-c1",
+          "pdma_sindh_heatwave_sops#p5-c2",
+          "pdma_sindh_heatwave_sops#p3-c2"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A18",
+        "split": "test",
+        "type": "answerable",
+        "question": "How high have temperatures been in Jacobabad and other Upper Sindh cities?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": false,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p4-c1",
+          "pdma_sindh_heatwave_sops#p5-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A19",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should the Karachi Metropolitan Corporation do during a heatwave response?",
+        "answered": true,
+        "hit@1": false,
+        "hit@3": true,
+        "keyword_hit": false,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p17-c1",
+          "pdma_sindh_heatwave_sops#p16-c6"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A20",
+        "split": "test",
+        "type": "answerable",
+        "question": "How does the Health Department prepare hospitals for heatwaves?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p10-c4",
+          "pdma_sindh_heatwave_sops#p10-c2",
+          "ndma_heatwave_advisory_apr2025#p2-c1"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A21",
+        "split": "dev",
+        "type": "answerable",
+        "question": "Who is most vulnerable to heatwaves?",
+        "answered": true,
+        "hit@1": false,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p12-c3",
+          "pdma_sindh_heatwave_sops#p3-c1",
+          "pdma_sindh_heatwave_sops#p4-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A22",
+        "split": "test",
+        "type": "answerable",
+        "question": "What should electricity companies do during extreme heat?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p12-c5",
+          "pdma_sindh_heatwave_sops#p12-c4"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A23",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should community members store at home before a heatwave?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p18-c3"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A24",
+        "split": "test",
+        "type": "answerable",
+        "question": "Which heat-related illnesses do the Sindh SOPs list?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p6-c2",
+          "pdma_sindh_heatwave_sops#p16-c1",
+          "pdma_sindh_heatwave_sops#p10-c2",
+          "pdma_sindh_heatwave_sops#p14-c5"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A25",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should traffic police do during heatwaves?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p15-c6",
+          "pdma_sindh_heatwave_sops#p15-c5",
+          "pdma_sindh_heatwave_sops#p17-c3"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A26",
+        "split": "test",
+        "type": "answerable",
+        "question": "What safety messages should the Information Department broadcast in a heatwave?",
+        "answered": true,
+        "hit@1": false,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p14-c7",
+          "pdma_sindh_heatwave_sops#p15-c2",
+          "pdma_sindh_heatwave_sops#p15-c3"
+        ],
+        "citations_on_expected_page": 2
+      },
+      {
+        "id": "A27",
+        "split": "dev",
+        "type": "answerable",
+        "question": "Where should hydration corners or water booths be set up?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p4-c3"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A28",
+        "split": "test",
+        "type": "answerable",
+        "question": "How hot did Karachi get during the 2015 and 2024 heatwaves?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p5-c1"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A29",
+        "split": "dev",
+        "type": "answerable",
+        "question": "What should I do if I feel dizzy in the heat?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p4-c1",
+          "ndma_heatwave_advisory_apr2025#p3-c1",
+          "pdma_sindh_heatwave_sops#p15-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A30",
+        "split": "dev",
+        "type": "answerable",
+        "question": "tips for staying safe in a heatwave",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "pdma_sindh_heatwave_sops#p15-c1",
+          "pdma_sindh_heatwave_sops#p15-c4",
+          "ndma_heatwave_advisory_apr2025#p4-c3"
+        ],
+        "citations_on_expected_page": 3
+      },
+      {
+        "id": "A31",
+        "split": "dev",
+        "type": "answerable",
+        "question": "Is it safe to travel by car during a heatwave?",
+        "answered": true,
+        "hit@1": true,
+        "hit@3": true,
+        "keyword_hit": true,
+        "citations": [
+          "ndma_heatwave_advisory_apr2025#p4-c2"
+        ],
+        "citations_on_expected_page": 1
+      },
+      {
+        "id": "A32",
+        "split": "dev",
+        "type": "answerable",
+        "question": "How should farmers look after livestock in the heat?",
+        "answered": false,
+        "hit@1": false,
+        "hit@3": true,
+        "keyword_hit": false,
+        "citations": [],
+        "citations_on_expected_page": 0
+      },
+      {
+        "id": "U01",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "What is the capital of France?",
+        "refused": true,
+        "top": {
+          "chunk_id": "ndma_heatwave_advisory_apr2025#p2-c2",
+          "score": 0.037,
+          "coverage": 0.0,
+          "missing_key_terms": [
+            "capit",
+            "franc"
+          ]
+        }
+      },
+      {
+        "id": "U02",
+        "split": "test",
+        "type": "unsupported",
+        "question": "Who won the cricket world cup in 2023?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p3-c2",
+          "score": 0.082,
+          "coverage": 0.2,
+          "missing_key_terms": [
+            "crick",
+            "cup",
+            "won",
+            "world"
+          ]
+        }
+      },
+      {
+        "id": "U03",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "What is the official temperature threshold PMD uses to declare a heatwave?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p9-c3",
+          "score": 0.185,
+          "coverage": 0.5,
+          "missing_key_terms": [
+            "decla",
+            "thres",
+            "uses"
+          ]
+        }
+      },
+      {
+        "id": "U04",
+        "split": "test",
+        "type": "unsupported",
+        "question": "What dose of paracetamol should be given for heatstroke?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p16-c1",
+          "score": 0.129,
+          "coverage": 0.25,
+          "missing_key_terms": [
+            "dose",
+            "given",
+            "parac"
+          ]
+        }
+      },
+      {
+        "id": "U05",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "What is the population of Jacobabad?",
+        "refused": false,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p7-c1",
+          "score": 0.17,
+          "coverage": 1.0,
+          "missing_key_terms": []
+        }
+      },
+      {
+        "id": "U06",
+        "split": "test",
+        "type": "unsupported",
+        "question": "How do I apply for a Pakistani passport?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p9-c2",
+          "score": 0.042,
+          "coverage": 0.0,
+          "missing_key_terms": [
+            "apply",
+            "pakis",
+            "passp"
+          ]
+        }
+      },
+      {
+        "id": "U07",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "What are the heatwave SOPs for Punjab province?",
+        "refused": false,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_alert_may2025#p1-c2",
+          "score": 0.125,
+          "coverage": 0.75,
+          "missing_key_terms": []
+        }
+      },
+      {
+        "id": "U08",
+        "split": "test",
+        "type": "unsupported",
+        "question": "What is the Rescue 1122 phone number in Lahore?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p16-c3",
+          "score": 0.116,
+          "coverage": 0.4,
+          "missing_key_terms": [
+            "phone"
+          ]
+        }
+      },
+      {
+        "id": "U09",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "Write me a poem about summer.",
+        "refused": true,
+        "top": {
+          "chunk_id": "ndma_heatwave_advisory_apr2025#p4-c2",
+          "score": 0.114,
+          "coverage": 0.33,
+          "missing_key_terms": [
+            "poem",
+            "write"
+          ]
+        }
+      },
+      {
+        "id": "U10",
+        "split": "test",
+        "type": "unsupported",
+        "question": "What is the share price of K-Electric?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p12-c3",
+          "score": 0.112,
+          "coverage": 0.33,
+          "missing_key_terms": [
+            "price"
+          ]
+        }
+      },
+      {
+        "id": "U11",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "How is climate change affecting glaciers in Antarctica?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p3-c1",
+          "score": 0.159,
+          "coverage": 0.6,
+          "missing_key_terms": [
+            "antar",
+            "glaci"
+          ]
+        }
+      },
+      {
+        "id": "U12",
+        "split": "test",
+        "type": "unsupported",
+        "question": "What did the NDMA heatwave advisory of June 2026 say?",
+        "refused": true,
+        "top": {
+          "chunk_id": "ndma_heatwave_advisory_apr2025#p1-c1",
+          "score": 0.121,
+          "coverage": 0.6,
+          "missing_key_terms": [
+            "2026"
+          ]
+        }
+      },
+      {
+        "id": "U13",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "Which air conditioner brand is the most energy efficient?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p11-c1",
+          "score": 0.187,
+          "coverage": 0.4,
+          "missing_key_terms": [
+            "air",
+            "brand"
+          ]
+        }
+      },
+      {
+        "id": "U14",
+        "split": "test",
+        "type": "unsupported",
+        "question": "What compensation does the government pay to families of heatwave victims?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_alert_may2025#p1-c4",
+          "score": 0.133,
+          "coverage": 0.17,
+          "missing_key_terms": [
+            "compe",
+            "pay",
+            "victi"
+          ]
+        }
+      },
+      {
+        "id": "U15",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "What is the exact heat index formula used by the US National Weather Service?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p6-c1",
+          "score": 0.122,
+          "coverage": 0.25,
+          "missing_key_terms": [
+            "exact",
+            "formu",
+            "natio",
+            "used"
+          ]
+        }
+      },
+      {
+        "id": "U16",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "Which hospital in Karachi has the most beds?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p10-c4",
+          "score": 0.118,
+          "coverage": 0.33,
+          "missing_key_terms": [
+            "beds"
+          ]
+        }
+      },
+      {
+        "id": "U17",
+        "split": "dev",
+        "type": "unsupported",
+        "question": "When will the monsoon start in Lahore this year?",
+        "refused": true,
+        "top": {
+          "chunk_id": "pdma_sindh_heatwave_sops#p7-c2",
+          "score": 0.088,
+          "coverage": 0.25,
+          "missing_key_terms": [
+            "lahor",
+            "start"
+          ]
+        }
+      },
+      {
+        "id": "D01",
+        "split": "dev",
+        "type": "data",
+        "question": "What was the maximum heat index in Karachi on 2024-06-24?",
+        "cited_rows": [
+          "karachi-20240624"
+        ],
+        "correct": true
+      },
+      {
+        "id": "D02",
+        "split": "test",
+        "type": "data",
+        "question": "What was the heat index in Lahore on 2025-05-30?",
+        "cited_rows": [
+          "lahore-20250530"
+        ],
+        "correct": true
+      },
+      {
+        "id": "D03",
+        "split": "dev",
+        "type": "data",
+        "question": "Heat index in Jacobabad on 2024-05-26?",
+        "cited_rows": [
+          "jacobabad-20240526"
+        ],
+        "correct": true
+      },
+      {
+        "id": "D04",
+        "split": "test",
+        "type": "data",
+        "question": "What is the heat risk in Jacobabad tomorrow?",
+        "cited_rows": [
+          "pred-jacobabad-20261021-h2",
+          "nwp-jacobabad-20261021-20261020T110538Z"
+        ],
+        "correct": true
+      },
+      {
+        "id": "D05",
+        "split": "test",
+        "type": "data",
+        "question": "Which city is hottest today?",
+        "cited_rows": [
+          "pred-karachi-20261020-h1",
+          "nwp-karachi-20261020-20261020T110536Z",
+          "pred-lahore-20261020-h1",
+          "nwp-lahore-20261020-20261020T110537Z",
+          "pred-jacobabad-20261020-h1",
+          "nwp-jacobabad-20261020-20261020T110538Z"
+        ],
+        "correct": true
+      }
+    ]
+  }
+}

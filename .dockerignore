@@ -1,0 +1,8 @@
+.git
+.venv
+**/__pycache__
+.pytest_cache
+data/_staging
+data/_archive
+data/bronze/documents/*.pdf
+data/rag/chunks.jsonl

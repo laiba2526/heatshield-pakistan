@@ -1,0 +1,46 @@
+# Hourly refresh on GitHub: fetch -> quality gates -> promote, then commit the
+# trusted outputs and run status. A failed gate still commits the status and
+# audit log (so the failure is visible) but never the rejected data.
+name: hourly-refresh
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hourly-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: make -C src update
+        id: update
+        continue-on-error: true
+        run: make -C src update
+      - name: Commit trusted outputs and status
+        run: |
+          git config user.name "heatshield-bot"
+          git config user.email "heatshield-bot@users.noreply.github.com"
+          git add data/manifest.json data/bronze/open_meteo data/silver data/gold data/status data/audit \
+                  data/quarantine reports/validation || true
+          git diff --cached --quiet || git commit -m "Hourly refresh: ${{ steps.update.outcome }}"
+          git push
+      - name: Sync Hugging Face Space (optional)
+        if: ${{ steps.update.outcome == 'success' && env.HF_TOKEN != '' && vars.HF_SPACE != '' }}
+        run: |
+          pip install huggingface_hub
+          python scripts/deploy_hf.py "${{ vars.HF_SPACE }}"

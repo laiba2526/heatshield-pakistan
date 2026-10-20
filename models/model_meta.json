@@ -1,0 +1,91 @@
+{
+  "target": "daily maximum NWS heat index (deg C), local PKT day",
+  "horizons_days": [
+    1,
+    2,
+    3
+  ],
+  "chosen_model_per_horizon": {
+    "1": "ridge",
+    "2": "ridge",
+    "3": "ridge"
+  },
+  "calibration_mae_per_candidate": {
+    "1": {
+      "gradient_boosting": 1.1850356141412997,
+      "ridge": 1.1375883679071883
+    },
+    "2": {
+      "gradient_boosting": 1.690716513334239,
+      "ridge": 1.5280132351976505
+    },
+    "3": {
+      "gradient_boosting": 2.000670338863921,
+      "ridge": 1.750833788791932
+    }
+  },
+  "conformal_half_widths_c": {
+    "1|karachi|0.8": 1.5154328816916671,
+    "1|karachi|0.9": 2.160554650427992,
+    "1|lahore|0.8": 1.9951098833981455,
+    "1|lahore|0.9": 3.2299671194634763,
+    "1|jacobabad|0.8": 1.6072441722627613,
+    "1|jacobabad|0.9": 2.2555068115706214,
+    "2|karachi|0.8": 1.9609684449329507,
+    "2|karachi|0.9": 2.800808995897478,
+    "2|lahore|0.8": 2.8568906642509586,
+    "2|lahore|0.9": 3.787903090242466,
+    "2|jacobabad|0.8": 2.2270063623580323,
+    "2|jacobabad|0.9": 3.1102314951966923,
+    "3|karachi|0.8": 2.1382459574991155,
+    "3|karachi|0.9": 3.0136338960745053,
+    "3|lahore|0.8": 3.251427614443787,
+    "3|lahore|0.9": 4.2292775077629905,
+    "3|jacobabad|0.8": 2.5603688867730146,
+    "3|jacobabad|0.9": 3.930493238710746
+  },
+  "features": [
+    "hi_max_lag0",
+    "hi_max_lag1",
+    "hi_max_lag2",
+    "hi_max_lag3",
+    "hi_max_lag6",
+    "hi_max_roll3",
+    "hi_max_roll7",
+    "hi_max_std7",
+    "hi_max_delta1",
+    "tmax_lag0",
+    "tmax_lag1",
+    "tmin_lag0",
+    "rh_mean_lag0",
+    "rh_min_lag0",
+    "dew_mean_lag0",
+    "dew_mean_delta1",
+    "wind_mean_lag0",
+    "hours_danger_lag0",
+    "clim_issue",
+    "clim_target",
+    "anom_lag0",
+    "anom_roll3",
+    "doy_sin",
+    "doy_cos",
+    "city_karachi",
+    "city_lahore",
+    "city_jacobabad"
+  ],
+  "split": {
+    "train": [
+      "2021-10-01",
+      "2024-09-30"
+    ],
+    "calibration": [
+      "2024-10-01",
+      "2025-09-30"
+    ],
+    "test": [
+      "2025-10-01",
+      "2026-12-31"
+    ]
+  },
+  "random_seed": 42
+}

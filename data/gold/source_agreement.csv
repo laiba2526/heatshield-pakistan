@@ -1,0 +1,7 @@
+reference,city,days,tmax_bias_c,tmax_mae_c,tmax_corr
+nasa_power,jacobabad,1554,-2.02,2.33,0.971
+nasa_power,karachi,1554,-0.32,1.07,0.925
+nasa_power,lahore,1554,-1.89,2.28,0.966
+era5,jacobabad,1837,-0.06,1.32,0.979
+era5,karachi,1837,-1.35,1.48,0.95
+era5,lahore,1837,-0.61,1.17,0.987

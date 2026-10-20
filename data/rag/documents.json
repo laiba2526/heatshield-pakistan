@@ -1,0 +1,76 @@
+[
+  {
+    "doc_id": "ndma_heatwave_advisory_apr2025",
+    "file": "data/bronze/documents/ndma_heatwave_advisory_apr2025.pdf",
+    "publisher": "National Disaster Management Authority (NDMA), Pakistan",
+    "url": "https://mocc.gov.pk/SiteImage/Misc/files/NDMA%20Heatwave%20Advisory%20(25%20April%202025)%20Final.pdf",
+    "sha256": "7c633ac9e3863fce71f881ea0b906ba5fcc1636ff93bd62ab092d01f8e17a151",
+    "hash_verified": true,
+    "status": "ingested",
+    "title": "NDMA Heatwave Advisory: Heatwave Conditions Predicted 26–30 April 2025",
+    "pages": 7,
+    "chunks": 11,
+    "skipped_pages": [
+      {
+        "page": 6,
+        "reason": "no extractable body text (image, chart or blank page)"
+      },
+      {
+        "page": 7,
+        "reason": "no extractable body text (image, chart or blank page)"
+      }
+    ]
+  },
+  {
+    "doc_id": "pdma_sindh_heatwave_alert_may2025",
+    "file": "data/bronze/documents/pdma_sindh_heatwave_alert_may2025.pdf",
+    "publisher": "Provincial Disaster Management Authority (PDMA), Sindh",
+    "url": "https://pdma.gos.pk/Documents/Heatwave/Heatwave_2025/Heatwave_Alert_2025/Heatwave%20Alert%20Dated%2015-05-2025.pdf",
+    "sha256": "136b062051d27287422ccfa46f850a5dd9ab1db36e7d0c1b49a90793ac116607",
+    "hash_verified": true,
+    "status": "ingested",
+    "title": "PDMA Sindh Heatwave Alert, 15 May 2025 (incl. PMD Heatwave-Alert and Karachi 3-day forecast)",
+    "pages": 4,
+    "chunks": 11,
+    "skipped_pages": [
+      {
+        "page": 4,
+        "reason": "Urdu text layer is not reliably extractable"
+      }
+    ]
+  },
+  {
+    "doc_id": "pdma_sindh_heatwave_sops",
+    "file": "data/bronze/documents/pdma_sindh_heatwave_sops.pdf",
+    "publisher": "Provincial Disaster Management Authority (PDMA), Sindh",
+    "url": "https://pdma.gos.pk/Documents/Reports/SOPs_Heatwave_Management_Sindh.pdf",
+    "sha256": "e4dc40e0fca37f3412e90bfcc9f9d355454d5f9a01f0cd563db379dfe9da4376",
+    "hash_verified": true,
+    "status": "ingested",
+    "title": "SOPs Heatwave Management, Sindh",
+    "pages": 22,
+    "chunks": 74,
+    "skipped_pages": [
+      {
+        "page": 1,
+        "reason": "no extractable body text (image, chart or blank page)"
+      },
+      {
+        "page": 2,
+        "reason": "table of contents (would compete with the real sections)"
+      },
+      {
+        "page": 20,
+        "reason": "no extractable body text (image, chart or blank page)"
+      },
+      {
+        "page": 21,
+        "reason": "no extractable body text (image, chart or blank page)"
+      },
+      {
+        "page": 22,
+        "reason": "no extractable body text (image, chart or blank page)"
+      }
+    ]
+  }
+]

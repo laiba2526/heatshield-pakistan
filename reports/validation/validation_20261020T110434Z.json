@@ -1,0 +1,1470 @@
+{
+  "run_id": "20261020T110434Z",
+  "mode": "train",
+  "started_utc": "2026-10-20T11:04:34Z",
+  "gate1": {
+    "gate": "gate1_bronze_files",
+    "passed": true,
+    "checks": [
+      {
+        "check": "karachi: trusted archive file available",
+        "passed": true,
+        "severity": "error"
+      },
+      {
+        "check": "karachi: forecast file available",
+        "passed": true,
+        "severity": "error"
+      },
+      {
+        "check": "lahore: trusted archive file available",
+        "passed": true,
+        "severity": "error"
+      },
+      {
+        "check": "lahore: forecast file available",
+        "passed": true,
+        "severity": "error"
+      },
+      {
+        "check": "jacobabad: trusted archive file available",
+        "passed": true,
+        "severity": "error"
+      },
+      {
+        "check": "jacobabad: forecast file available",
+        "passed": true,
+        "severity": "error"
+      },
+      {
+        "check": "no Bronze file rejected",
+        "passed": true,
+        "severity": "warning",
+        "detail": "rejected=[]"
+      }
+    ],
+    "files": [
+      {
+        "file": "data/bronze/open_meteo/archive_jacobabad_20261019T141504Z.json",
+        "source": "open_meteo_archive",
+        "city": "jacobabad",
+        "passed": true,
+        "rows": 44064,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/open_meteo/archive_jacobabad_20261019T141504Z.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=d6b9da4fd899 actual=d6b9da4fd899"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_hourly_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "\u00b0c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "km/h"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=44064"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/open_meteo/archive_karachi_20261019T141455Z.json",
+        "source": "open_meteo_archive",
+        "city": "karachi",
+        "passed": true,
+        "rows": 44064,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/open_meteo/archive_karachi_20261019T141455Z.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=507cddaa392e actual=507cddaa392e"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_hourly_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "\u00b0c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "km/h"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=44064"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/open_meteo/archive_lahore_20261019T141459Z.json",
+        "source": "open_meteo_archive",
+        "city": "lahore",
+        "passed": true,
+        "rows": 44064,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/open_meteo/archive_lahore_20261019T141459Z.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=1687dc333c08 actual=1687dc333c08"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_hourly_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "\u00b0c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "km/h"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=44064"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/open_meteo/forecast_jacobabad_20261019T141501Z.json",
+        "source": "open_meteo_forecast",
+        "city": "jacobabad",
+        "passed": true,
+        "rows": 72,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/open_meteo/forecast_jacobabad_20261019T141501Z.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=0d2922e36ebe actual=0d2922e36ebe"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_hourly_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "\u00b0c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "km/h"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=72"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/open_meteo/forecast_karachi_20261019T141452Z.json",
+        "source": "open_meteo_forecast",
+        "city": "karachi",
+        "passed": true,
+        "rows": 72,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/open_meteo/forecast_karachi_20261019T141452Z.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=4340ebdb0c9d actual=4340ebdb0c9d"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_hourly_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "\u00b0c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "km/h"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=72"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/open_meteo/forecast_lahore_20261019T141456Z.json",
+        "source": "open_meteo_forecast",
+        "city": "lahore",
+        "passed": true,
+        "rows": 72,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/open_meteo/forecast_lahore_20261019T141456Z.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=58a8b758f655 actual=58a8b758f655"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_hourly_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "\u00b0c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "km/h"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=72"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/era5/era5_jacobabad_20261020T110202Z.json",
+        "source": "era5",
+        "city": "jacobabad",
+        "passed": true,
+        "rows": 44064,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/era5/era5_jacobabad_20261020T110202Z.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=af35775af0a9 actual=af35775af0a9"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_hourly_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "\u00b0c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "km/h"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=44064"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/era5/era5_karachi_20261020T110154Z.json",
+        "source": "era5",
+        "city": "karachi",
+        "passed": true,
+        "rows": 44064,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/era5/era5_karachi_20261020T110154Z.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=42ecb8738029 actual=42ecb8738029"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_hourly_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "\u00b0c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "km/h"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=44064"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/era5/era5_lahore_20261020T110158Z.json",
+        "source": "era5",
+        "city": "lahore",
+        "passed": true,
+        "rows": 44064,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/era5/era5_lahore_20261020T110158Z.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=58d8965fb5c7 actual=58d8965fb5c7"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_hourly_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "\u00b0c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "km/h"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=44064"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_jacobabad_2021.json",
+        "source": "nasa_power",
+        "city": "jacobabad",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_jacobabad_2021.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=a3e013b1144e actual=a3e013b1144e"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_jacobabad_2022.json",
+        "source": "nasa_power",
+        "city": "jacobabad",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_jacobabad_2022.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=b27cbd18117b actual=b27cbd18117b"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_jacobabad_2023.json",
+        "source": "nasa_power",
+        "city": "jacobabad",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_jacobabad_2023.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=8ad88013bd00 actual=8ad88013bd00"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_jacobabad_2024.json",
+        "source": "nasa_power",
+        "city": "jacobabad",
+        "passed": true,
+        "rows": 8784,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_jacobabad_2024.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=1437d0863f46 actual=1437d0863f46"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8784"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_jacobabad_2025.json",
+        "source": "nasa_power",
+        "city": "jacobabad",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_jacobabad_2025.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=65cadbd2e5c1 actual=65cadbd2e5c1"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_karachi_2021.json",
+        "source": "nasa_power",
+        "city": "karachi",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_karachi_2021.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=ac337a26e476 actual=ac337a26e476"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_karachi_2022.json",
+        "source": "nasa_power",
+        "city": "karachi",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_karachi_2022.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=028d9b01691f actual=028d9b01691f"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_karachi_2023.json",
+        "source": "nasa_power",
+        "city": "karachi",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_karachi_2023.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=1828ba1c959c actual=1828ba1c959c"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_karachi_2024.json",
+        "source": "nasa_power",
+        "city": "karachi",
+        "passed": true,
+        "rows": 8784,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_karachi_2024.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=adabc35b0054 actual=adabc35b0054"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8784"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_karachi_2025.json",
+        "source": "nasa_power",
+        "city": "karachi",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_karachi_2025.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=9d284a9a96a1 actual=9d284a9a96a1"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_lahore_2021.json",
+        "source": "nasa_power",
+        "city": "lahore",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_lahore_2021.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=e6111175c89f actual=e6111175c89f"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_lahore_2022.json",
+        "source": "nasa_power",
+        "city": "lahore",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_lahore_2022.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=5e06f9a277e9 actual=5e06f9a277e9"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_lahore_2023.json",
+        "source": "nasa_power",
+        "city": "lahore",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_lahore_2023.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=f197665d616f actual=f197665d616f"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_lahore_2024.json",
+        "source": "nasa_power",
+        "city": "lahore",
+        "passed": true,
+        "rows": 8784,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_lahore_2024.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=e5503203cb35 actual=e5503203cb35"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8784"
+          }
+        ]
+      },
+      {
+        "file": "data/bronze/nasa_power/power_lahore_2025.json",
+        "source": "nasa_power",
+        "city": "lahore",
+        "passed": true,
+        "rows": 8760,
+        "checks": [
+          {
+            "check": "listed_in_manifest",
+            "passed": true,
+            "detail": "data/bronze/nasa_power/power_lahore_2025.json"
+          },
+          {
+            "check": "sha256_matches_manifest",
+            "passed": true,
+            "detail": "manifest=8baad83d2e26 actual=8baad83d2e26"
+          },
+          {
+            "check": "json_parses",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "has_parameter_block",
+            "passed": true,
+            "detail": ""
+          },
+          {
+            "check": "expected_variables_present",
+            "passed": true,
+            "detail": "missing=[]"
+          },
+          {
+            "check": "temperature_unit_known",
+            "passed": true,
+            "detail": "c"
+          },
+          {
+            "check": "wind_unit_known",
+            "passed": true,
+            "detail": "m/s"
+          },
+          {
+            "check": "timestamps_parse",
+            "passed": true,
+            "detail": "unparseable=0"
+          },
+          {
+            "check": "hourly_cadence",
+            "passed": true,
+            "detail": "share_of_1h_steps=1.0000"
+          },
+          {
+            "check": "non_empty",
+            "passed": true,
+            "detail": "rows=8760"
+          }
+        ]
+      }
+    ]
+  },
+  "error": "TypeError: Cannot convert tz-naive timestamps, use tz_localize to localize",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Weather Forecast\\heatshield-pakistan\\src\\heatshield\\pipeline.py\", line 362, in run\n    silver = build_silver(files, agent)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Weather Forecast\\heatshield-pakistan\\src\\heatshield\\pipeline.py\", line 142, in build_silver\n    cross.append(agent.cross_check(cleaned, n, city))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Weather Forecast\\heatshield-pakistan\\src\\heatshield\\quality_agent.py\", line 230, in cross_check\n    both = pd.concat({\"tmax_primary\": daily_max(silver), \"tmax_nasa\": daily_max(nasa)}, axis=1).dropna()\n                                                                      ^^^^^^^^^^^^^^^\n  File \"D:\\Weather Forecast\\heatshield-pakistan\\src\\heatshield\\quality_agent.py\", line 228, in daily_max\n    local = df.assign(date=df[\"timestamp_utc\"].dt.tz_convert(config.LOCAL_TZ).dt.date)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Weather Forecast\\heatshield-pakistan\\.venv\\Lib\\site-packages\\pandas\\core\\accessor.py\", line 127, in f\n    return self._delegate_method(name, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Weather Forecast\\heatshield-pakistan\\.venv\\Lib\\site-packages\\pandas\\core\\indexes\\accessors.py\", line 126, in _delegate_method\n    result = method(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Weather Forecast\\heatshield-pakistan\\.venv\\Lib\\site-packages\\pandas\\core\\indexes\\datetimes.py\", line 395, in tz_convert\n    arr = self._data.tz_convert(tz)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Weather Forecast\\heatshield-pakistan\\.venv\\Lib\\site-packages\\pandas\\core\\arrays\\datetimes.py\", line 931, in tz_convert\n    raise TypeError(\nTypeError: Cannot convert tz-naive timestamps, use tz_localize to localize\n",
+  "status": "error",
+  "finished_utc": "2026-10-20T11:04:37Z",
+  "duration_s": 2.6
+}

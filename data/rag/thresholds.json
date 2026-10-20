@@ -1,0 +1,7 @@
+{
+  "floor_score": 0.02,
+  "min_score": 0.12,
+  "max_missing_key_terms": 1,
+  "tuned_on": "dev split: 18 answerable + 10 unsupported questions",
+  "dev_balanced_accuracy": 0.8722
+}
