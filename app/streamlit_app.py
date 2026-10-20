@@ -51,7 +51,9 @@ def start_scheduler() -> dict:
         time.sleep(5)
         while True:
             status = pipeline.read_status()
-            last = status.get("last_run_utc")
+            # Time since the last *download*: a `data` run rebuilds without fetching,
+            # so it must not postpone the hourly refresh.
+            last = (status.get("last_fetch") or {}).get("utc")
             age_min = (datetime.now(timezone.utc) - pd.Timestamp(last).to_pydatetime()).total_seconds() / 60 if last else 1e9
             if age_min >= REFRESH_MINUTES:
                 state["running"] = True
@@ -191,9 +193,14 @@ if not last_ok and status.get("last_run_status"):
     st.error(f"The latest refresh ({status.get('last_run_id')}) did not pass validation: **{status.get('last_run_error')}**. "
              f"The dashboard is showing the last trusted dataset from run **{status.get('last_success_run_id')}**.")
 elif stale:
+    fetch = status.get("last_fetch") or {}
+    why = (f"the last download had {len(fetch['failed'])} failure(s) - Open-Meteo may be unreachable"
+           if fetch.get("failed") else
+           f"the last download was {ago(fetch.get('utc'))}" if fetch.get("utc") else "no download has run yet")
     st.warning("Data is older than the freshness target (observations > "
-               f"{config.FRESHNESS_STALE_HOURS} h or forecast > {config.FRESHNESS_FORECAST_STALE_HOURS} h). "
-               "The hourly refresh may be failing to reach Open-Meteo.")
+               f"{config.FRESHNESS_STALE_HOURS} h or forecast > {config.FRESHNESS_FORECAST_STALE_HOURS} h): {why}. "
+               + ("It refreshes when the hourly GitHub job publishes new data." if IN_BROWSER else
+                  "Run `python run.py update` to download fresh data now."))
 
 city = st.segmented_control("City", options=list(CITY_NAMES), format_func=CITY_NAMES.get,
                             default="jacobabad", label_visibility="collapsed") or "jacobabad"
