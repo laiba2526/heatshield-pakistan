@@ -1,7 +1,17 @@
+import sys
 import os
 import json
 import pandas as pd
 from datetime import datetime
+
+# Ensure Python can find the src package according to Member 2's guide
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
+# Optional imports from Member 2's package if available
+try:
+    from heatshield.quality import check_missing_values
+except ImportError:
+    pass
 
 LOG_FILE = "logs/audit.jsonl"
 REPORT_FILE = "reports/validation_report.json"
@@ -19,7 +29,7 @@ def log_audit(record_id, check_name, action_taken, reason):
         "timestamp": datetime.utcnow().isoformat(),
         "record_id": str(record_id),
         "check": check_name,
-        "action": action_taken, # FIXED, FILLED, FLAGGED, QUARANTINED
+        "action": action_taken,
         "reason": reason
     }
     with open(LOG_FILE, "a") as f:
@@ -28,11 +38,11 @@ def log_audit(record_id, check_name, action_taken, reason):
 def run_quality_checks(df_path: str) -> pd.DataFrame:
     print(f"[Data Quality Agent] Inspecting dataset at: {df_path}")
     if not os.path.exists(df_path):
-        raise FileNotFoundError(f"Target dataset not found: {df_path}.")
+        raise FileNotFoundError(f"Target dataset not found at {df_path}. Ensure Member 2's silver layer generation ran.")
 
     df = pd.read_csv(df_path)
     
-    # Requirement: Data-freshness tracking
+    # Data-freshness tracking
     if 'timestamp' in df.columns:
         df['parsed_time'] = pd.to_datetime(df['timestamp'], errors='coerce')
         latest_time = df['parsed_time'].max()
@@ -50,57 +60,49 @@ def run_quality_checks(df_path: str) -> pd.DataFrame:
         is_valid = True
         reasons = []
 
-        # Requirement: Fix or Fill minor missing values instead of instant quarantine
+        # Fill minor missing relative humidity if temperature is valid
         if pd.isna(row_dict.get('relative_humidity_2m')) and pd.notna(row_dict.get('temperature_2m')):
-            row_dict['relative_humidity_2m'] = 50.0  # Median fill fallback
+            row_dict['relative_humidity_2m'] = 50.0  
             stats["filled"] += 1
             log_audit(idx, "missing_humidity", "FILLED", "Filled missing humidity with median fallback (50.0).")
         
-        # Check: Missing critical temperature
+        # Check critical temperature
         if pd.isna(row_dict.get('temperature_2m')):
             is_valid = False
             reasons.append("Missing essential temperature value.")
             stats["quarantined"] += 1
             log_audit(idx, "missing_temperature", "QUARANTINED", "Missing core temperature metric.")
 
-        # Check: Physical bounds validation (-10°C to 60°C)
+        # Check physical bounds (-10°C to 60°C)
         elif not (-10 <= float(row_dict['temperature_2m']) <= 60):
             is_valid = False
             reasons.append(f"Temperature {row_dict['temperature_2m']}°C out of bounds.")
             stats["quarantined"] += 1
             log_audit(idx, "temp_bounds", "QUARANTINED", "Temperature reading out of valid range.")
 
-        # Check: Humidity bounds (0% to 100%)
+        # Check humidity bounds (0% to 100%)
         elif not (0 <= float(row_dict.get('relative_humidity_2m', 0)) <= 100):
             is_valid = False
             reasons.append(f"Humidity {row_dict['relative_humidity_2m']}% out of bounds.")
             stats["quarantined"] += 1
             log_audit(idx, "humidity_bounds", "QUARANTINED", "Humidity out of range [0, 100].")
-        
-        else:
-            # Minor anomaly flagging example (e.g., unusual wind speed)
-            if float(row_dict.get('wind_speed_10m', 0)) > 100:
-                stats["flagged"] += 1
-                log_audit(idx, "high_wind_flag", "FLAGGED", "Unusually high wind speed detected, flagged for review.")
 
         if is_valid:
-            clean_rows.pop('parsed_time', None) if 'parsed_time' in row_dict else None
+            row_dict.pop('parsed_time', None)
             clean_rows.append(row_dict)
         else:
-            row_dict.pop('parsed_time', None) if 'parsed_time' in row_dict else None
+            row_dict.pop('parsed_time', None)
             row_dict["quarantine_reasons"] = "; ".join(reasons)
             quarantine_rows.append(row_dict)
 
     df_clean = pd.DataFrame(clean_rows)
 
-    # Requirement: Quarantine questionable records
     if quarantine_rows:
         df_quarantine = pd.DataFrame(quarantine_rows)
         q_path = os.path.join(QUARANTINE_DIR, f"quarantined_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.csv")
         df_quarantine.to_csv(q_path, index=False)
         print(f"[Data Quality Agent] ⚠️ Quarantined {len(quarantine_rows)} invalid rows to {q_path}")
 
-    # Requirement: Generate Validation Report
     report = {
         "run_timestamp": datetime.utcnow().isoformat(),
         "source_file": df_path,
@@ -114,45 +116,21 @@ def run_quality_checks(df_path: str) -> pd.DataFrame:
     }
     with open(REPORT_FILE, "w") as f:
         json.dump(report, f, indent=4)
-    print(f"[Validation Report] Saved to {REPORT_FILE}")
 
-    # Requirement: Ensure last trusted dataset is preserved when validation fails
     if report["status"] == "CRITICAL_FAILURE" and os.path.exists(GOLD_FILE):
-        print("[Quality Gate] ❌ Critical failure rate exceeded (>20% bad data). Preserving last trusted dataset and blocking update!")
+        print("[Quality Gate] ❌ Critical failure rate exceeded. Preserving last trusted dataset.")
         return None
 
     return df_clean
 
 if __name__ == "__main__":
     target_file = "data/silver/weather_silver.csv"
-    
-    # Ensure silver sample exists for local test
-    if not os.path.exists(target_file):
-        os.makedirs("data/silver", exist_ok=True)
-        from datetime import datetime, timedelta
-        import numpy as np
-        sample_data = [{
-            "timestamp": (datetime.now() - timedelta(hours=i)).strftime("%Y-%m-%d %H:%M:%S"),
-            "city": "Karachi",
-            "temperature_2m": 35.0,
-            "relative_humidity_2m": None if i == 2 else 65.0, # Test fill
-            "dew_point_2m": 24.0,
-            "wind_speed_10m": 12.0,
-            "heat_index": 40.0,
-            "heat_risk_category": "Danger",
-            "vulnerability_score": 0.68,
-            "target_heat_index_t1": 41.0,
-            "target_heat_index_t2": 42.0
-        } for i in range(10)]
-        pd.DataFrame(sample_data).to_csv(target_file, index=False)
-
     cleaned_df = run_quality_checks(target_file)
     
     if cleaned_df is not None:
-        # Backup current gold as last trusted before overwriting
         if os.path.exists(GOLD_FILE):
             os.replace(GOLD_FILE, BACKUP_FILE)
         cleaned_df.to_csv(GOLD_FILE, index=False)
-        print("[Data Quality Agent] ✅ Gold layer successfully updated and last trusted backup preserved.")
+        print("[Data Quality Agent] ✅ Gold layer successfully updated from Member 2's silver layer.")
     else:
-        print("[Data Quality Agent] 🛑 Retained previous trusted Gold dataset due to quality gate rejection.")
+        print("[Data Quality Agent] 🛑 Retained previous trusted Gold dataset.")
