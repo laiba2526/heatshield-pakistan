@@ -343,15 +343,16 @@ def freshness(silver: dict, now: datetime) -> dict:
 
 
 # ===================================================================== run
-def run(mode: str = "data", fetch: bool | None = None, mutate=None) -> dict:
+def run(mode: str = "data", fetch: bool | None = None, mutate=None, note: str | None = None) -> dict:
     """Run the pipeline. ``mutate`` (tests / fault drills) may corrupt the
-    Bronze frames after Gate 1 to prove that bad data cannot replace trusted data."""
+    Bronze frames after Gate 1 to prove that bad data cannot replace trusted data.
+    ``note`` labels the run in the run history and audit log (e.g. a fault drill)."""
     from heatshield.model import HeatShieldModel   # local import keeps the module light
 
     started = utcnow()
     run_id = started.strftime("%Y%m%dT%H%M%SZ")
     status_before = read_status()
-    report: dict = {"run_id": run_id, "mode": mode, "started_utc": iso(started)}
+    report: dict = {"run_id": run_id, "mode": mode, "started_utc": iso(started), "note": note}
     agent = DataQualityAgent(run_id)
     stage = config.STAGING / run_id
 
@@ -414,7 +415,7 @@ def run(mode: str = "data", fetch: bool | None = None, mutate=None) -> dict:
         report.update({"status": status, "finished_utc": iso(finished),
                        "duration_s": round((finished - started).total_seconds(), 1)})
         audit = [{"run_id": run_id, "ts_utc": iso(finished), "stage": "pipeline", "rule": "run",
-                  "action": status, "reason": report.get("error", "all gates passed")}]
+                  "action": status, "reason": report.get("error", "all gates passed"), "note": note}]
         for gate in ("gate1", "gate2"):
             if gate in report:
                 audit.append({"run_id": run_id, "ts_utc": iso(finished), "stage": gate, "rule": "quality_gate",
@@ -446,7 +447,7 @@ def run(mode: str = "data", fetch: bool | None = None, mutate=None) -> dict:
                                      "duration_s": report["duration_s"], "error": report.get("error"),
                                      "gate1": report.get("gate1", {}).get("passed"),
                                      "gate2": report.get("gate2", {}).get("passed"),
-                                     "agent_actions": report.get("agent_actions", {})}])
+                                     "agent_actions": report.get("agent_actions", {}), "note": note}])
     return report
 
 

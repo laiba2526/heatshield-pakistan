@@ -5,7 +5,7 @@ Licences and URLs were verified on **2026-10-20**, with the confirming URL given
 | Source | Role in HeatShield | Licence | Redistribution |
 |---|---|---|---|
 | Open-Meteo historical archive | Primary hourly series 2021-10-01 → 2026-10-10 | CC BY 4.0 | Yes, with attribution |
-| Open-Meteo forecast API | Hourly refresh: last 14 days + 3-day forecast | CC BY 4.0 | Yes, with attribution |
+| Open-Meteo forecast API | Hourly refresh: last 14 days + 4-day forecast | CC BY 4.0 | Yes, with attribution |
 | Copernicus ERA5 (via Open-Meteo) | Independent reanalysis cross-check | CC BY 4.0 (since 2 Jul 2025) | Yes, with attribution |
 | NASA POWER hourly | Cross-check and gap filling (≤ 24 h) | Free use, acknowledgement requested | Yes, with acknowledgement |
 | NDMA / PDMA Sindh / PMD PDFs | RAG evidence only | No open licence ("All rights reserved") | **No**: cite and link, fetch from the publisher |
@@ -32,7 +32,7 @@ Licences and URLs were verified on **2026-10-20**, with the confirming URL given
 ## 3. Open-Meteo forecast API
 
 * **Docs:** https://open-meteo.com/en/docs. **Endpoint:** https://api.open-meteo.com/v1/forecast
-* **Requests:** the same variables with `past_days=14` and `forecast_days=3`, fetched every hour by `make -C src update`. The past part fills the 5–10 day delay before archive data is published. The future part is the NWP forecast shown on the dashboard.
+* **Requests:** the same variables with `past_days=14` and `forecast_days=4` (4 UTC days, so the third Pakistan day is complete), fetched every hour by `make -C src update`. The past part fills the 5–10 day delay before archive data is published. The future part is the NWP forecast shown on the dashboard.
 * **Licence:** CC BY 4.0, as above. Some upstream national models carry their own licences. For example, UK Met Office data is CC BY-SA, though it is unlikely to feed the default model mix for Pakistan; this has not been verified.
 * **Evaluation note:** forecast-API values are model output. They are labelled `open_meteo_recent` in Silver and never mixed silently with archive data.
 

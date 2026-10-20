@@ -1,6 +1,7 @@
 """Downloads into the Bronze layer (raw bytes saved exactly as received).
 
-* ``fetch_forecasts`` - the hourly refresh: Open-Meteo forecast API with
+* ``fetch_forecasts`` - the hourly refresh: Open-Meteo forecast API (4 days, so
+  the third local Pakistan day is complete despite the UTC+5 offset) with
   ``past_days`` so the most recent observed-period hours (which the archive
   API only publishes with a delay of several days) are refreshed too.
 * ``fetch_era5`` - Copernicus ERA5 reanalysis for the three cities, served
@@ -59,7 +60,7 @@ def _save(response: requests.Response, path: Path, entry: dict) -> Path:
     return path
 
 
-def fetch_forecasts(past_days: int = 14, forecast_days: int = 3, timeout: int = 60) -> dict:
+def fetch_forecasts(past_days: int = 14, forecast_days: int = 4, timeout: int = 60) -> dict:
     """Fetch the latest forecast for each city. Never raises: failures are reported."""
     result = {"fetched": [], "failed": []}
     for city, c in config.CITIES.items():

@@ -829,8 +829,8 @@
         "type": "data",
         "question": "What is the heat risk in Jacobabad tomorrow?",
         "cited_rows": [
-          "pred-jacobabad-20261021-h2",
-          "nwp-jacobabad-20261021-20261020T110538Z"
+          "pred-jacobabad-20261022-h2",
+          "nwp-jacobabad-20261022-20261020T204830Z"
         ],
         "correct": true
       },
@@ -840,12 +840,12 @@
         "type": "data",
         "question": "Which city is hottest today?",
         "cited_rows": [
-          "pred-karachi-20261020-h1",
-          "nwp-karachi-20261020-20261020T110536Z",
-          "pred-lahore-20261020-h1",
-          "nwp-lahore-20261020-20261020T110537Z",
-          "pred-jacobabad-20261020-h1",
-          "nwp-jacobabad-20261020-20261020T110538Z"
+          "pred-karachi-20261021-h1",
+          "nwp-karachi-20261021-20261020T204828Z",
+          "pred-lahore-20261021-h1",
+          "nwp-lahore-20261021-20261020T204829Z",
+          "pred-jacobabad-20261021-h1",
+          "nwp-jacobabad-20261021-20261020T204830Z"
         ],
         "correct": true
       }
@@ -1656,8 +1656,8 @@
         "type": "data",
         "question": "What is the heat risk in Jacobabad tomorrow?",
         "cited_rows": [
-          "pred-jacobabad-20261021-h2",
-          "nwp-jacobabad-20261021-20261020T110538Z"
+          "pred-jacobabad-20261022-h2",
+          "nwp-jacobabad-20261022-20261020T204830Z"
         ],
         "correct": true
       },
@@ -1667,12 +1667,12 @@
         "type": "data",
         "question": "Which city is hottest today?",
         "cited_rows": [
-          "pred-karachi-20261020-h1",
-          "nwp-karachi-20261020-20261020T110536Z",
-          "pred-lahore-20261020-h1",
-          "nwp-lahore-20261020-20261020T110537Z",
-          "pred-jacobabad-20261020-h1",
-          "nwp-jacobabad-20261020-20261020T110538Z"
+          "pred-karachi-20261021-h1",
+          "nwp-karachi-20261021-20261020T204828Z",
+          "pred-lahore-20261021-h1",
+          "nwp-lahore-20261021-20261020T204829Z",
+          "pred-jacobabad-20261021-h1",
+          "nwp-jacobabad-20261021-20261020T204830Z"
         ],
         "correct": true
       }

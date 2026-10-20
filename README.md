@@ -70,13 +70,13 @@ Dashboard · RAG assistant · status (data/status) · audit log (data/audit) · 
 
 **Heat-stress indicator:** the NWS heat index (Rothfusz regression with the official low- and high-humidity adjustments). Risk levels use the NWS categories, in °C: Caution ≥ 26.7, Extreme Caution ≥ 32.2, Danger ≥ 39.4, Extreme Danger ≥ 51.7.
 
-## Results (unseen test year 2025-10-01 → 2026-10-19)
+## Results (unseen test year 2025-10-01 → 2026-10-20)
 
 | Horizon | Model MAE | Persistence | Historical average | Model − best baseline, 95 % CI | 90 % interval coverage |
 |---|---|---|---|---|---|
-| 1 day | **1.14 °C** | 1.16 | 2.02 | [−0.06, +0.03] (tie) | 90.1 % |
-| 2 days | **1.53 °C** | 1.64 | 2.02 | [−0.18, +0.00] | 89.6 % |
-| 3 days | **1.74 °C** | 1.98 | 2.02 | [−0.30, −0.08] (better) | 89.8 % |
+| 1 day | **1.13 °C** | 1.16 | 2.02 | [−0.06, +0.03] (tie) | 90.1 % |
+| 2 days | **1.53 °C** | 1.64 | 2.02 | [−0.18, +0.01] | 89.6 % |
+| 3 days | **1.74 °C** | 1.98 | 2.02 | [−0.30, −0.08] (better) | 89.9 % |
 
 RAG assistant, held-out test questions:
 

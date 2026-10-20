@@ -27,7 +27,7 @@ The model is not suitable for:
 |---|---|---|
 | train | 2021-10-01 → 2024-09-30 | Model fitting and the climatology (historical-average baseline) |
 | calibration | 2024-10-01 → 2025-09-30 | Choosing between candidate models and calibrating the conformal intervals |
-| test | 2025-10-01 → 2026-10-19 | Reporting only; never used for any choice |
+| test | 2025-10-01 → 2026-10-20 | Reporting only; never used for any choice |
 
 ## Method
 
@@ -47,9 +47,9 @@ The model is not suitable for:
 
 | Horizon | Model MAE (95 % CI) | Persistence | Historical average | Model − best baseline (95 % CI) | 90 % interval coverage |
 |---|---|---|---|---|---|
-| 1 day | 1.14 (1.03–1.24) | 1.16 | 2.02 | −0.06 … +0.03 | 90.1 % |
-| 2 days | 1.53 (1.39–1.70) | 1.64 | 2.02 | −0.18 … +0.00 | 89.6 % |
-| 3 days | 1.74 (1.58–1.94) | 1.98 | 2.02 | −0.30 … −0.08 | 89.8 % |
+| 1 day | 1.13 (1.03–1.24) | 1.16 | 2.02 | −0.06 … +0.03 | 90.1 % |
+| 2 days | 1.53 (1.39–1.69) | 1.64 | 2.02 | −0.18 … +0.01 | 89.6 % |
+| 3 days | 1.74 (1.57–1.94) | 1.98 | 2.02 | −0.30 … −0.08 | 89.9 % |
 
 * Confidence intervals come from a moving-block bootstrap: 7-day blocks over dates, 1,000 resamples.
 * **What this means:**

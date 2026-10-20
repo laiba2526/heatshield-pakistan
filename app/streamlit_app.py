@@ -375,7 +375,12 @@ with tabs[3]:
     if len(runs):
         st.markdown("**Run history**")
         r = runs.sort_values("finished_utc", ascending=False).head(48)
-        st.dataframe(r[["run_id", "mode", "status", "gate1", "gate2", "duration_s", "error"]], hide_index=True, width="stretch")
+        r = r.assign(note=r["note"].fillna("") if "note" in r else "")
+        st.dataframe(r[["run_id", "mode", "note", "status", "gate1", "gate2", "duration_s", "error"]], hide_index=True,
+                     width="stretch")
+        if r["note"].str.startswith("fault drill").any():
+            st.caption("Runs labelled *fault drill* failed on purpose: bad data was fed in to prove that the quality "
+                       "gates stop it and the trusted data stays unchanged (`python run.py drill`).")
     audit = load_jsonl_tail(str(config.AUDIT / "audit_log.jsonl"), _mtime(config.AUDIT / "audit_log.jsonl"), 300)
     if len(audit):
         with st.expander("Audit log (latest entries)"):

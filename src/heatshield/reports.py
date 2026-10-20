@@ -30,7 +30,7 @@ def data_quality_report() -> str:
          "## 1. Sources", "",
          "| Layer | Source | Role | Variables |", "|---|---|---|---|",
          "| Bronze | Open-Meteo historical archive (2021-10-01 → 2026-10-10) | primary hourly series | T, RH, Td, wind |",
-         "| Bronze | Open-Meteo forecast API (`past_days=14`, 3-day forecast), fetched hourly | recent hours + forecast | T, RH, Td, wind |",
+         "| Bronze | Open-Meteo forecast API (`past_days=14`, 4-day forecast), fetched hourly | recent hours + forecast | T, RH, Td, wind |",
          "| Bronze | Copernicus ERA5 via Open-Meteo (`models=era5`) | independent reanalysis cross-check | T, RH, Td, wind |",
          "| Bronze | NASA POWER hourly (MERRA-2 based), 2021–2025 | cross-check + gap filling (≤ 24 h) | T, RH, Td, wind |",
          "| Bronze | NDMA / PDMA Sindh / PMD PDFs | RAG evidence only (never model input) | text |", "",

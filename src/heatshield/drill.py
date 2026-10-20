@@ -42,7 +42,7 @@ def run_drills(keep_failed: bool = False) -> bool:
     ok_all = True
     if not _gold_hash():
         print("No trusted Gold yet - running `data` first.")
-        pipeline.run("data", fetch=False)
+        pipeline.run("data", fetch=False, note="setup before fault drill")
     real_manifest = bronze.load_manifest
 
     def tampered_manifest():
@@ -60,9 +60,9 @@ def run_drills(keep_failed: bool = False) -> bool:
         before = _gold_hash()
         if patch:
             with patch:
-                rep = pipeline.run("data", fetch=False, **kwargs)
+                rep = pipeline.run("data", fetch=False, note=f"fault drill (expected to fail): {name}", **kwargs)
         else:
-            rep = pipeline.run("data", fetch=False, **kwargs)
+            rep = pipeline.run("data", fetch=False, note=f"fault drill (expected to fail): {name}", **kwargs)
         after = _gold_hash()
         status = pipeline.read_status()
         checks = {
@@ -83,7 +83,7 @@ def run_drills(keep_failed: bool = False) -> bool:
             print(f"  [{'PASS' if v else 'FAIL'}] {k}")
         ok_all &= all(checks.values())
     if not keep_failed:
-        rep = pipeline.run("data", fetch=False)
+        rep = pipeline.run("data", fetch=False, note="restore after fault drill")
         print(f"\nRestore run {rep['run_id']}: {rep['status']}")
     print("\nALL DRILLS PASSED" if ok_all else "\nSOME DRILL CHECKS FAILED")
     return ok_all

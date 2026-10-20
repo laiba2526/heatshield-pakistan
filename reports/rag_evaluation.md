@@ -72,8 +72,8 @@ Test split size: 14 answerable, 7 unsupported, 3 data questions — small, so ea
 | D01 | dev | data | What was the maximum heat index in Karachi on 2024-06-24? | ✓ karachi-20240624 |
 | D02 | test | data | What was the heat index in Lahore on 2025-05-30? | ✓ lahore-20250530 |
 | D03 | dev | data | Heat index in Jacobabad on 2024-05-26? | ✓ jacobabad-20240526 |
-| D04 | test | data | What is the heat risk in Jacobabad tomorrow? | ✓ pred-jacobabad-20261021-h2, nwp-jacobabad-20261021-20261020T110538Z |
-| D05 | test | data | Which city is hottest today? | ✓ pred-karachi-20261020-h1, nwp-karachi-20261020-20261020T110536Z, pred-lahore-20261020-h1, nwp-lahore-20261020-20261020T110537Z, pred-jacobabad-20261020-h1, nwp-jacobabad-20261020-20261020T110538Z |
+| D04 | test | data | What is the heat risk in Jacobabad tomorrow? | ✓ pred-jacobabad-20261022-h2, nwp-jacobabad-20261022-20261020T204830Z |
+| D05 | test | data | Which city is hottest today? | ✓ pred-karachi-20261021-h1, nwp-karachi-20261021-20261020T204828Z, pred-lahore-20261021-h1, nwp-lahore-20261021-20261020T204829Z, pred-jacobabad-20261021-h1, nwp-jacobabad-20261021-20261020T204830Z |
 
 ## Notes
 
