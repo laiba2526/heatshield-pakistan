@@ -18,8 +18,6 @@ import logging
 import re
 import sys
 
-from pypdf import PdfReader
-
 from heatshield import bronze, config
 
 OUT_DIR = config.DATA / "rag"          # own folder: pipeline promotion swaps data/silver
@@ -151,6 +149,7 @@ def ingest() -> dict:
             continue
         meta = {"publisher": record["publisher"], "url": record["url"],
                 **DOC_META.get(doc_id, {"title": doc_id, "short": doc_id, "date": ""})}
+        from pypdf import PdfReader          # imported here: the browser build only reads the index
         pages = [p.extract_text() or "" for p in PdfReader(str(pdf)).pages]
         chunks, skipped = chunk_document(doc_id, pages, meta)
         record.update({"status": "ingested", "title": meta["title"], "pages": len(pages),
@@ -196,6 +195,8 @@ def ensure_documents(timeout: int = 60) -> list[str]:
 
 def ensure_index() -> None:
     """Build the chunk index if it is missing or older than any source PDF."""
+    if sys.platform == "emscripten" and CHUNKS.exists():   # static browser build ships a prebuilt index
+        return
     ensure_documents()
     pdfs = list(config.BRONZE_DOCS.glob("*.pdf"))
     if not CHUNKS.exists() or any(p.stat().st_mtime > CHUNKS.stat().st_mtime for p in pdfs):

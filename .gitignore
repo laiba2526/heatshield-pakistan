@@ -27,3 +27,6 @@ Thumbs.db
 
 # RAG index: rebuilt by `make -C src rag` (contains document text; see docs/sources.md)
 data/rag/chunks.jsonl
+
+# Static Hugging Face build output (scripts/build_static_space.py)
+build/

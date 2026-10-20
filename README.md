@@ -17,7 +17,7 @@ Heat-stress early warning for **Karachi, Lahore and Jacobabad**. The project has
 2. A daily maximum heat-index forecast for 1–3 days ahead, evaluated against persistence and historical-average baselines on an unseen year.
 3. A RAG assistant that answers only from official NDMA / PDMA Sindh / PMD documents, with citations and "I don't know".
 4. A Streamlit dashboard with hourly refresh, quality status and data freshness.
-5. Packaging for Hugging Face Spaces.
+5. A live deployment on Hugging Face Spaces: https://huggingface.co/spaces/NeuralPowerX/heatshield-pakistan (static Space, the app runs in the browser; data refreshed hourly by GitHub Actions; see `docs/DEPLOYMENT.md`).
 
 > Student prototype, not an official warning service. Always follow PMD / NDMA / PDMA advisories.
 

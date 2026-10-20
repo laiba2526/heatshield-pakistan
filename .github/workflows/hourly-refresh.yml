@@ -1,6 +1,7 @@
-# Hourly refresh on GitHub: fetch -> quality gates -> promote, then commit the
-# trusted outputs and run status. A failed gate still commits the status and
-# audit log (so the failure is visible) but never the rejected data.
+# Hourly refresh on GitHub: fetch -> quality gates -> promote, commit the trusted
+# outputs and run status, then publish them to the static Hugging Face Space.
+# A failed gate still commits the status and audit log (so the failure is
+# visible) but never the rejected data, and nothing is published.
 name: hourly-refresh
 
 on:
@@ -39,8 +40,11 @@ jobs:
                   data/quarantine reports/validation || true
           git diff --cached --quiet || git commit -m "Hourly refresh: ${{ steps.update.outcome }}"
           git push
-      - name: Sync Hugging Face Space (optional)
+      - name: Publish trusted data to the Hugging Face static Space
+        # Needs the repository secret HF_TOKEN (write token) and the repository
+        # variable HF_SPACE (e.g. NeuralPowerX/heatshield-pakistan).
         if: ${{ steps.update.outcome == 'success' && env.HF_TOKEN != '' && vars.HF_SPACE != '' }}
         run: |
           pip install huggingface_hub
+          make -C src rag
           python scripts/deploy_hf.py "${{ vars.HF_SPACE }}"

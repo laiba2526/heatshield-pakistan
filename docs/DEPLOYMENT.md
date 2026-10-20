@@ -1,24 +1,29 @@
 # Deployment and automation
 
-## 1. Hugging Face Spaces (Docker)
+## 1. Hugging Face Spaces (free static Space)
 
-The repository root is a ready-made Docker Space. `README.md` carries the Space front-matter (`sdk: docker`, `app_port: 7860`), and the `Dockerfile` builds the app.
+**Live:** https://huggingface.co/spaces/NeuralPowerX/heatshield-pakistan
+
+Free Hugging Face accounts can only host *static* Spaces (Docker and Gradio Spaces now need a PRO subscription). The dashboard therefore runs **in the visitor's browser** with stlite (Streamlit 1.62 on Pyodide, `@stlite/browser@1.9.2`), and the data pipeline runs in GitHub Actions.
 
 ```bash
 pip install huggingface_hub
-set HF_TOKEN=hf_...                                   # write token from huggingface.co/settings/tokens
-python scripts/deploy_hf.py <your-hf-username>/heatshield-pakistan
+hf auth login                                          # once, with a *write* token
+python scripts/deploy_hf.py NeuralPowerX/heatshield-pakistan
 ```
 
-* `deploy_hf.py` creates the Space if needed and uploads the repository. It **excludes** the NDMA / PDMA / PMD PDFs and their extracted text, which are not openly licensed (see `docs/sources.md`). At start-up the container downloads them from the official URLs, checks their SHA-256 against `data/manifest.json`, and builds the index.
-* No API keys or secrets are needed: the assistant quotes the documents verbatim and uses no language model.
-* **Hourly refresh inside the Space:** a background thread runs `pipeline.run("update")` every `HEATSHIELD_REFRESH_MINUTES` (default 60). A run that fails a quality gate leaves the trusted data in place, and the dashboard shows the failure.
-* Free Spaces go to sleep after about 48 h without visitors. The first visit wakes the Space, and the refresher catches up immediately because it checks the age of the last run.
-* Open-Meteo's free tier limits are per IP address. Spaces share IPs, so if fetches start failing, the status strip shows "Stale" and the run history shows the fetch errors.
+* `scripts/build_static_space.py` writes `build/hf_static/`:
+  * `index.html` loads stlite and mounts the app.
+  * `app.zip` (≈0.4 MB) holds the app code, the trusted Gold tables, status, audit tail, reports and the prebuilt RAG index.
+  * `README.md` is the Space config (`sdk: static`).
+* The first visit downloads Python and the packages into the browser, which takes 1–2 minutes (longer on slow connections). Later visits are faster.
+* **Inside the browser** there is no background refresher and no network fetching. The Data quality tab says the data comes from the last trusted GitHub Actions run.
+* **Licence note:** the static build ships the 96 short extracted passages of the NDMA / PDMA / PMD documents used for citations, but not the PDFs. See `docs/sources.md` §5.
+* **Docker alternative** (full app with in-process hourly refresh) for PRO accounts: `python scripts/deploy_hf.py <user>/<space> --docker`. The `Dockerfile` is tested locally: `docker build -t heatshield-pakistan .` then `docker run -p 7860:7860 heatshield-pakistan`.
 
 ## 2. Hourly refresh on GitHub (optional)
 
-`.github/workflows/hourly-refresh.yml` runs `make -C src update` every hour and commits:
+`.github/workflows/hourly-refresh.yml` runs `make -C src update` every hour. After a successful run it publishes the new trusted data to the static Space. This needs the repository **secret** `HF_TOKEN` (a Hugging Face write token) and the repository **variable** `HF_SPACE` = `NeuralPowerX/heatshield-pakistan`; only the repository owner can add these. Each run also commits:
 * the new Bronze forecast files and the manifest,
 * the promoted Silver and Gold layers,
 * the status, audit log, quarantine and validation reports.

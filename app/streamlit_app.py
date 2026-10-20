@@ -29,7 +29,10 @@ from heatshield.heat_index import risk_color  # noqa: E402
 
 st.set_page_config(page_title="HeatShield Pakistan", page_icon="🌡️", layout="wide")
 
-REFRESH_MINUTES = int(os.environ.get("HEATSHIELD_REFRESH_MINUTES", "60"))
+# In the static Hugging Face build the app runs inside the browser (Pyodide):
+# no background threads or network fetches there - GitHub Actions refreshes the data hourly.
+IN_BROWSER = sys.platform == "emscripten"
+REFRESH_MINUTES = 0 if IN_BROWSER else int(os.environ.get("HEATSHIELD_REFRESH_MINUTES", "60"))
 RISK_NAMES = [n for n, _, _ in config.RISK_LEVELS]
 CITY_NAMES = {k: v["name"] for k, v in config.CITIES.items()}
 
@@ -79,7 +82,9 @@ def load_gold(stamp: float) -> dict:
         "pred": read("predictions.csv", parse_dates=["issue_date", "target_date"]),
         "nwp_daily": read("forecast_daily.csv", parse_dates=["date"]),
         "agreement": read("source_agreement.csv"),
-        "nwp_hourly": pd.read_parquet(g / "forecast_hourly.parquet") if (g / "forecast_hourly.parquet").exists() else pd.DataFrame(),
+        "nwp_hourly": (pd.read_csv(g / "forecast_hourly.csv") if (g / "forecast_hourly.csv").exists()
+                       else pd.read_parquet(g / "forecast_hourly.parquet") if (g / "forecast_hourly.parquet").exists()
+                       else pd.DataFrame()),
     }
     return out
 
@@ -233,7 +238,7 @@ with tabs[0]:
             fig.update_layout(height=360, margin=dict(l=10, r=10, t=10, b=10), yaxis_title="°C",
                               yaxis_range=[max(0, h["temperature_c"].min() - 5), h["heat_index_c"].max() + 4],
                               legend=dict(orientation="h", y=-0.15))
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
             issued = h["issued_utc"].iloc[0] if "issued_utc" in h else None
             st.caption(f"Forecast issued {pkt(pd.to_datetime(issued, format='%Y%m%dT%H%M%SZ', utc=True).isoformat()) if issued else '–'}. "
                        "Weather data by [Open-Meteo.com](https://open-meteo.com/) (CC BY 4.0).")
@@ -250,7 +255,7 @@ with tabs[0]:
                                          arrayminus=cp["pred"] - cp["lo90"]))
         fig.update_layout(height=360, margin=dict(l=10, r=10, t=10, b=10), yaxis_title="Max heat index °C",
                           legend=dict(orientation="h", y=-0.15))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     st.markdown("**All cities**")
     rows = []
@@ -261,7 +266,7 @@ with tabs[0]:
                      "Last observed day": f"{last['date'].iloc[0]:%d %b}: {last['hi_max_c'].iloc[0]:.1f} °C" if len(last) else "–",
                      **{f"{r['target_date']:%a %d %b}": f"{r['pred']:.1f} °C · {r['predicted_risk_level']}" for _, r in pc.iterrows()},
                      "Obs. updated": ago(fresh.get(c, {}).get("last_observation_utc"))})
-    st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+    st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
 
 # ================================================================ history
 with tabs[1]:
@@ -274,7 +279,7 @@ with tabs[1]:
     fig.add_scatter(x=dd["date"], y=dd["tmax_c"], name="Max temperature", line=dict(color="#999", width=1))
     fig.add_scatter(x=dd["date"], y=dd["hi_max_c"], name="Max heat index", line=dict(color="#d7263d", width=2))
     fig.update_layout(height=420, margin=dict(l=10, r=10, t=10, b=10), yaxis_title="°C", legend=dict(orientation="h", y=-0.12))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     yearly = d[d["complete_day"]].assign(year=d["date"].dt.year)
     counts = yearly.groupby(["year", "risk_level"]).size().unstack(fill_value=0).reindex(columns=RISK_NAMES, fill_value=0)
     fig = go.Figure()
@@ -282,9 +287,9 @@ with tabs[1]:
         fig.add_bar(x=counts.index.astype(str), y=counts[name], name=name, marker_color=risk_color(name))
     fig.update_layout(barmode="stack", height=300, margin=dict(l=10, r=10, t=30, b=10),
                       title="Days per year at Extreme Caution or worse (partial years at the ends)")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     with st.expander("Gold rows (heat_daily)"):
-        st.dataframe(dd.sort_values("date", ascending=False), hide_index=True, use_container_width=True)
+        st.dataframe(dd.sort_values("date", ascending=False), hide_index=True, width="stretch")
 
 # ============================================================== evaluation
 with tabs[2]:
@@ -306,7 +311,7 @@ with tabs[2]:
                                      arrayminus=[v - c[0] for c, v in zip(ci, mae)]))
         fig.update_layout(barmode="group", height=340, yaxis_title="MAE (°C) · 95 % CI",
                           margin=dict(l=10, r=10, t=10, b=10), legend=dict(orientation="h", y=-0.15))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         for h, hr in ev["horizons"].items():
             o = hr["overall"]
             rows.append({"Horizon": f"{h} day", "Model MAE": round(o["model"]["mae"], 2),
@@ -317,7 +322,7 @@ with tabs[2]:
                          "80 % interval coverage": f"{o['interval_80']['empirical_coverage']:.1%}",
                          "90 % interval coverage": f"{o['interval_90']['empirical_coverage']:.1%}",
                          "Danger POD / FAR": f"{o['model']['danger']['pod'] or 0:.2f} / {o['model']['danger']['far'] or 0:.2f}"})
-        st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+        st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
         st.caption("A negative upper bound on *Model − best baseline* means the model beats both baselines with 95 % confidence. "
                    "Intervals: split-conformal, calibrated on the year before the test period.")
         tp = load_test_predictions(_mtime(config.REPORTS / "model_test_predictions.csv"))
@@ -333,7 +338,7 @@ with tabs[2]:
             fig.add_scatter(x=t["target_date"], y=t["persistence"], name="Persistence", line=dict(color="#4c78a8", dash="dot"))
             fig.update_layout(height=380, margin=dict(l=10, r=10, t=30, b=10), yaxis_title="Max heat index °C",
                               title=f"{CITY_NAMES[city]} — test period, {hsel}-day ahead", legend=dict(orientation="h", y=-0.15))
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
         md = config.REPORTS / "model_evaluation.md"
         if md.exists():
             with st.expander("Full evaluation report"):
@@ -355,7 +360,7 @@ with tabs[3]:
             st.markdown(f"**{title}: {'✅ PASS' if g['passed'] else '❌ FAIL'}**  ·  run `{rep['run_id']}`")
             st.dataframe(pd.DataFrame([{"": "✅" if c["passed"] else ("⚠️" if c["severity"] == "warning" else "❌"),
                                         "check": c["check"], "detail": c.get("detail", "")} for c in g["checks"]]),
-                         hide_index=True, use_container_width=True, height=280)
+                         hide_index=True, width="stretch", height=280)
     st.markdown("**Data Quality Agent — actions in the latest run**")
     acts = (rep or {}).get("agent_actions", {})
     st.dataframe(pd.DataFrame([{"rule": k, "records": v} for k, v in acts.items()]) if acts else
@@ -363,20 +368,23 @@ with tabs[3]:
     if len(runs):
         st.markdown("**Run history**")
         r = runs.sort_values("finished_utc", ascending=False).head(48)
-        st.dataframe(r[["run_id", "mode", "status", "gate1", "gate2", "duration_s", "error"]], hide_index=True, use_container_width=True)
+        st.dataframe(r[["run_id", "mode", "status", "gate1", "gate2", "duration_s", "error"]], hide_index=True, width="stretch")
     audit = load_jsonl_tail(str(config.AUDIT / "audit_log.jsonl"), _mtime(config.AUDIT / "audit_log.jsonl"), 300)
     if len(audit):
         with st.expander("Audit log (latest entries)"):
             cols = [c for c in ["ts_utc", "run_id", "stage", "rule", "action", "city", "count", "reason"] if c in audit]
-            st.dataframe(audit[cols].iloc[::-1], hide_index=True, use_container_width=True)
+            st.dataframe(audit[cols].iloc[::-1], hide_index=True, width="stretch")
     if len(gold["agreement"]):
         st.markdown("**Cross-source agreement of daily Tmax** (primary Open-Meteo vs independent references)")
         st.dataframe(gold["agreement"], hide_index=True)
     comp = daily.groupby("city").agg(days=("row_id", "size"), complete_days=("complete_day", "sum"),
                                      days_with_filled_hours=("filled_hours", lambda s: int((s > 0).sum())))
     st.markdown("**Gold coverage**")
-    st.dataframe(comp, use_container_width=True)
-    if not scheduler.get("disabled"):
+    st.dataframe(comp, width="stretch")
+    if IN_BROWSER:
+        st.caption("Static build: the data pipeline and both quality gates run hourly in GitHub Actions; "
+                   "this page shows the last trusted result they published.")
+    elif not scheduler.get("disabled"):
         st.caption(f"Automatic refresh every {REFRESH_MINUTES} min in this server process"
                    f"{' — running now…' if scheduler.get('running') else ''}.")
 
@@ -390,7 +398,7 @@ with tabs[4]:
     ex_cols = st.columns(len(examples))
     clicked = None
     for col, ex in zip(ex_cols, examples):
-        if col.button(ex, use_container_width=True):
+        if col.button(ex, width="stretch"):
             clicked = ex
     if "chat" not in st.session_state:
         st.session_state.chat = []
