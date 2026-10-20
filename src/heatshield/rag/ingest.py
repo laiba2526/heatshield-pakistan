@@ -203,6 +203,8 @@ def ensure_index() -> None:
 
 
 def main() -> int:
+    for problem in ensure_documents():       # fetch any official PDF that is not shipped
+        print("document not available:", problem)
     res = ingest()
     for d in res["documents"]:
         print(f"{d['doc_id']}: {d['status']} - {d.get('chunks', 0)} chunks, "

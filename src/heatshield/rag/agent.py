@@ -99,6 +99,8 @@ class Passage:
 
 class DocumentIndex:
     def __init__(self, chunks: list[dict]):
+        if not chunks:
+            raise RuntimeError("no document chunks - the official PDFs could not be loaded")
         self.chunks = chunks
         texts = [c.get("search_text", c["text"]) for c in chunks]
         self.word = TfidfVectorizer(ngram_range=(1, 2), sublinear_tf=True, stop_words=list(STOP), min_df=1)
