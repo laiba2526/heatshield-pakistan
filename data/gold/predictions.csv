@@ -1,10 +1,10 @@
 row_id,city,issue_date,target_date,horizon,pred,lo80,hi80,lo90,hi90,predicted_risk_level,upper90_risk_level,clim_target,issued_from_row_id
-pred-jacobabad-20261021-h1,jacobabad,2026-10-20,2026-10-21,1,34.45,32.84,36.06,32.19,36.7,Extreme Caution,Extreme Caution,33.32,jacobabad-20261020
+pred-jacobabad-20261021-h1,jacobabad,2026-10-20,2026-10-21,1,34.45,32.84,36.06,32.2,36.71,Extreme Caution,Extreme Caution,33.32,jacobabad-20261020
 pred-karachi-20261021-h1,karachi,2026-10-20,2026-10-21,1,34.98,33.46,36.49,32.82,37.14,Extreme Caution,Extreme Caution,33.5,karachi-20261020
-pred-lahore-20261021-h1,lahore,2026-10-20,2026-10-21,1,30.08,28.08,32.07,26.85,33.31,Caution,Extreme Caution,28.82,lahore-20261020
+pred-lahore-20261021-h1,lahore,2026-10-20,2026-10-21,1,30.08,28.09,32.08,26.85,33.31,Caution,Extreme Caution,28.82,lahore-20261020
 pred-jacobabad-20261022-h2,jacobabad,2026-10-20,2026-10-22,2,34.21,31.99,36.44,31.1,37.32,Extreme Caution,Extreme Caution,33.15,jacobabad-20261020
 pred-karachi-20261022-h2,karachi,2026-10-20,2026-10-22,2,34.82,32.86,36.78,32.02,37.62,Extreme Caution,Extreme Caution,33.41,karachi-20261020
-pred-lahore-20261022-h2,lahore,2026-10-20,2026-10-22,2,29.63,26.77,32.49,25.84,33.42,Caution,Extreme Caution,28.69,lahore-20261020
+pred-lahore-20261022-h2,lahore,2026-10-20,2026-10-22,2,29.63,26.78,32.49,25.85,33.42,Caution,Extreme Caution,28.69,lahore-20261020
 pred-jacobabad-20261023-h3,jacobabad,2026-10-20,2026-10-23,3,33.86,31.3,36.42,29.93,37.79,Extreme Caution,Extreme Caution,33.05,jacobabad-20261020
-pred-karachi-20261023-h3,karachi,2026-10-20,2026-10-23,3,34.56,32.42,36.7,31.55,37.57,Extreme Caution,Extreme Caution,33.29,karachi-20261020
-pred-lahore-20261023-h3,lahore,2026-10-20,2026-10-23,3,29.17,25.92,32.42,24.94,33.4,Caution,Extreme Caution,28.6,lahore-20261020
+pred-karachi-20261023-h3,karachi,2026-10-20,2026-10-23,3,34.56,32.42,36.7,31.55,37.58,Extreme Caution,Extreme Caution,33.29,karachi-20261020
+pred-lahore-20261023-h3,lahore,2026-10-20,2026-10-23,3,29.18,25.92,32.43,24.95,33.41,Caution,Extreme Caution,28.6,lahore-20261020
