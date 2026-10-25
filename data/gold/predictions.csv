@@ -1,10 +1,10 @@
 row_id,city,issue_date,target_date,horizon,pred,lo80,hi80,lo90,hi90,predicted_risk_level,upper90_risk_level,clim_target,issued_from_row_id
-pred-jacobabad-20261025-h1,jacobabad,2026-10-24,2026-10-25,1,31.66,30.05,33.26,29.4,33.91,Caution,Extreme Caution,33.06,jacobabad-20261024
-pred-karachi-20261025-h1,karachi,2026-10-24,2026-10-25,1,33.12,31.61,34.64,30.96,35.28,Extreme Caution,Extreme Caution,33.31,karachi-20261024
-pred-lahore-20261025-h1,lahore,2026-10-24,2026-10-25,1,28.93,26.93,30.92,25.7,32.16,Caution,Caution,28.6,lahore-20261024
-pred-jacobabad-20261026-h2,jacobabad,2026-10-24,2026-10-26,2,31.99,29.77,34.22,28.88,35.1,Caution,Extreme Caution,33.01,jacobabad-20261024
+pred-jacobabad-20261025-h1,jacobabad,2026-10-24,2026-10-25,1,31.66,30.05,33.27,29.41,33.92,Caution,Extreme Caution,33.06,jacobabad-20261024
+pred-karachi-20261025-h1,karachi,2026-10-24,2026-10-25,1,33.13,31.61,34.64,30.96,35.29,Extreme Caution,Extreme Caution,33.31,karachi-20261024
+pred-lahore-20261025-h1,lahore,2026-10-24,2026-10-25,1,28.93,26.94,30.93,25.7,32.16,Caution,Caution,28.6,lahore-20261024
+pred-jacobabad-20261026-h2,jacobabad,2026-10-24,2026-10-26,2,32.0,29.77,34.22,28.89,35.11,Caution,Extreme Caution,33.01,jacobabad-20261024
 pred-karachi-20261026-h2,karachi,2026-10-24,2026-10-26,2,33.19,31.23,35.15,30.39,35.99,Extreme Caution,Extreme Caution,33.28,karachi-20261024
-pred-lahore-20261026-h2,lahore,2026-10-24,2026-10-26,2,28.65,25.79,31.5,24.86,32.43,Caution,Extreme Caution,28.55,lahore-20261024
+pred-lahore-20261026-h2,lahore,2026-10-24,2026-10-26,2,28.65,25.79,31.51,24.86,32.44,Caution,Extreme Caution,28.55,lahore-20261024
 pred-jacobabad-20261027-h3,jacobabad,2026-10-24,2026-10-27,3,32.26,29.7,34.82,28.33,36.19,Extreme Caution,Extreme Caution,32.85,jacobabad-20261024
 pred-karachi-20261027-h3,karachi,2026-10-24,2026-10-27,3,33.52,31.38,35.66,30.51,36.53,Extreme Caution,Extreme Caution,33.25,karachi-20261024
 pred-lahore-20261027-h3,lahore,2026-10-24,2026-10-27,3,28.55,25.3,31.8,24.32,32.78,Caution,Extreme Caution,28.47,lahore-20261024
