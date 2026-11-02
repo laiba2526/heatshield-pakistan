@@ -1,13 +1,16 @@
 row_id,city,date,tmax_c,tmin_c,tmean_c,rh_mean_pct,rh_min_pct,dew_point_mean_c,wind_mean_ms,hi_max_c,hi_mean_c,hours_hi_ge_danger,valid_hours,filled_hours,hours,sources,data_completeness,complete_day,risk_level,qc_status,issued_utc
-nwp-jacobabad-20261102-20261101T233618Z,jacobabad,2026-11-02,35.3,20.0,27.44,28.0,15,6.42,1.11,32.87,26.53,0,24,0,24,open_meteo_forecast+open_meteo_recent,1.0,True,Extreme Caution,ok,20261101T233618Z
-nwp-jacobabad-20261103-20261101T233618Z,jacobabad,2026-11-03,35.2,22.0,27.85,33.38,16,9.2,1.95,33.04,27.07,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261101T233618Z
-nwp-jacobabad-20261104-20261101T233618Z,jacobabad,2026-11-04,35.5,19.8,27.09,33.67,16,8.48,1.43,33.16,26.25,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261101T233618Z
-nwp-jacobabad-20261105-20261101T233618Z,jacobabad,2026-11-05,,,22.86,42.4,38,9.36,1.07,,,0,5,0,5,open_meteo_forecast,0.21,False,Unknown,incomplete,20261101T233618Z
-nwp-karachi-20261102-20261101T233617Z,karachi,2026-11-02,31.5,22.5,26.8,76.75,50,21.98,1.95,36.03,27.97,0,24,0,24,open_meteo_forecast+open_meteo_recent,1.0,True,Extreme Caution,ok,20261101T233617Z
-nwp-karachi-20261103-20261101T233617Z,karachi,2026-11-03,33.4,23.1,27.54,69.21,30,20.17,2.03,34.79,27.8,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261101T233617Z
-nwp-karachi-20261104-20261101T233617Z,karachi,2026-11-04,33.0,22.6,27.16,72.29,37,20.69,1.95,33.57,27.5,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261101T233617Z
-nwp-karachi-20261105-20261101T233617Z,karachi,2026-11-05,,,23.8,87.8,86,21.66,1.86,,,0,5,0,5,open_meteo_forecast,0.21,False,Unknown,incomplete,20261101T233617Z
-nwp-lahore-20261102-20261101T233618Z,lahore,2026-11-02,28.2,18.6,23.05,69.08,47,16.71,0.96,28.4,23.14,0,24,0,24,open_meteo_forecast+open_meteo_recent,1.0,True,Caution,ok,20261101T233618Z
-nwp-lahore-20261103-20261101T233618Z,lahore,2026-11-03,28.7,18.5,22.91,65.62,42,15.68,1.63,28.48,22.91,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261101T233618Z
-nwp-lahore-20261104-20261101T233618Z,lahore,2026-11-04,28.7,18.1,22.92,67.46,43,16.15,1.18,28.57,22.92,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261101T233618Z
-nwp-lahore-20261105-20261101T233618Z,lahore,2026-11-05,,,19.84,78.6,77,15.98,1.44,,,0,5,0,5,open_meteo_forecast,0.21,False,Unknown,incomplete,20261101T233618Z
+nwp-jacobabad-20261102-20261102T060209Z,jacobabad,2026-11-02,35.1,20.2,27.41,27.21,14,5.74,1.12,32.6,26.48,0,24,0,24,open_meteo_forecast+open_meteo_recent,1.0,True,Extreme Caution,ok,20261102T060209Z
+nwp-jacobabad-20261103-20261102T060209Z,jacobabad,2026-11-03,35.0,22.2,27.8,33.83,17,9.45,2.07,32.83,27.03,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261102T060209Z
+nwp-jacobabad-20261104-20261102T060209Z,jacobabad,2026-11-04,35.4,19.5,26.91,35.62,17,9.07,1.5,33.15,26.11,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261102T060209Z
+nwp-jacobabad-20261105-20261102T060209Z,jacobabad,2026-11-05,35.5,20.1,27.48,32.88,17,8.78,1.11,33.26,26.67,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261102T060209Z
+nwp-jacobabad-20261106-20261102T060209Z,jacobabad,2026-11-06,,,23.1,39.2,36,8.44,0.62,,,0,5,0,5,open_meteo_forecast,0.21,False,Unknown,incomplete,20261102T060209Z
+nwp-karachi-20261102-20261102T060208Z,karachi,2026-11-02,31.3,22.6,26.82,77.08,51,22.09,1.88,35.13,27.91,0,24,0,24,open_meteo_forecast+open_meteo_recent,1.0,True,Extreme Caution,ok,20261102T060208Z
+nwp-karachi-20261103-20261102T060208Z,karachi,2026-11-03,33.0,23.0,27.45,68.75,32,19.97,2.05,33.58,27.61,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261102T060208Z
+nwp-karachi-20261104-20261102T060208Z,karachi,2026-11-04,32.6,22.5,26.99,73.42,35,20.9,1.9,33.9,27.43,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261102T060208Z
+nwp-karachi-20261105-20261102T060208Z,karachi,2026-11-05,33.0,22.0,27.12,65.79,27,18.97,2.01,33.85,27.14,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261102T060208Z
+nwp-karachi-20261106-20261102T060208Z,karachi,2026-11-06,,,23.54,85.6,83,21.02,1.65,,,0,5,0,5,open_meteo_forecast,0.21,False,Unknown,incomplete,20261102T060208Z
+nwp-lahore-20261102-20261102T060209Z,lahore,2026-11-02,28.0,18.4,23.09,70.29,48,17.0,0.74,28.27,23.16,0,24,0,24,open_meteo_forecast+open_meteo_recent,1.0,True,Caution,ok,20261102T060209Z
+nwp-lahore-20261103-20261102T060209Z,lahore,2026-11-03,28.4,18.4,22.82,67.58,44,16.02,1.55,28.35,22.83,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261102T060209Z
+nwp-lahore-20261104-20261102T060209Z,lahore,2026-11-04,28.6,18.3,22.93,67.5,43,16.19,1.26,28.47,22.95,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261102T060209Z
+nwp-lahore-20261105-20261102T060209Z,lahore,2026-11-05,29.0,18.3,23.12,66.0,39,15.97,0.99,28.61,23.11,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261102T060209Z
+nwp-lahore-20261106-20261102T060209Z,lahore,2026-11-06,,,19.98,73.8,73,15.18,1.73,,,0,5,0,5,open_meteo_forecast,0.21,False,Unknown,incomplete,20261102T060209Z
