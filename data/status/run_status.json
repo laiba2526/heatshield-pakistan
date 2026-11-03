@@ -1,55 +1,55 @@
 {
-  "last_run_id": "20261103T150802Z",
-  "last_run_utc": "2026-11-03T15:08:08Z",
+  "last_run_id": "20261103T205931Z",
+  "last_run_utc": "2026-11-03T20:59:36Z",
   "last_run_status": "success",
   "last_run_error": null,
   "last_run_mode": "update",
   "gate1_passed": true,
   "gate2_passed": true,
-  "serving_run_id": "20261103T150802Z",
-  "last_success_run_id": "20261103T150802Z",
-  "last_success_utc": "2026-11-03T15:08:08Z",
+  "serving_run_id": "20261103T205931Z",
+  "last_success_run_id": "20261103T205931Z",
+  "last_success_utc": "2026-11-03T20:59:36Z",
   "freshness": {
     "karachi": {
-      "last_observation_utc": "2026-11-03T14:00:00Z",
-      "observation_age_hours": 1.1,
-      "forecast_issued_utc": "2026-11-03T15:08:02Z",
+      "last_observation_utc": "2026-11-03T19:00:00Z",
+      "observation_age_hours": 2.0,
+      "forecast_issued_utc": "2026-11-03T20:59:31Z",
       "forecast_age_hours": 0.0,
       "observations_stale": false,
       "forecast_stale": false
     },
     "lahore": {
-      "last_observation_utc": "2026-11-03T14:00:00Z",
-      "observation_age_hours": 1.1,
-      "forecast_issued_utc": "2026-11-03T15:08:03Z",
+      "last_observation_utc": "2026-11-03T19:00:00Z",
+      "observation_age_hours": 2.0,
+      "forecast_issued_utc": "2026-11-03T20:59:32Z",
       "forecast_age_hours": 0.0,
       "observations_stale": false,
       "forecast_stale": false
     },
     "jacobabad": {
-      "last_observation_utc": "2026-11-03T14:00:00Z",
-      "observation_age_hours": 1.1,
-      "forecast_issued_utc": "2026-11-03T15:08:04Z",
+      "last_observation_utc": "2026-11-03T19:00:00Z",
+      "observation_age_hours": 2.0,
+      "forecast_issued_utc": "2026-11-03T20:59:32Z",
       "forecast_age_hours": 0.0,
       "observations_stale": false,
       "forecast_stale": false
     }
   },
   "trusted_snapshot": {
-    "run_id": "20261103T150802Z",
-    "gold_rows": 5580,
+    "run_id": "20261103T205931Z",
+    "gold_rows": 5583,
     "last_observation_utc": {
-      "karachi": "2026-11-03T14:00:00Z",
-      "lahore": "2026-11-03T14:00:00Z",
-      "jacobabad": "2026-11-03T14:00:00Z"
+      "karachi": "2026-11-03T19:00:00Z",
+      "lahore": "2026-11-03T19:00:00Z",
+      "jacobabad": "2026-11-03T19:00:00Z"
     }
   },
   "last_fetch": {
-    "utc": "2026-11-03T15:08:08Z",
+    "utc": "2026-11-03T20:59:36Z",
     "fetched": [
-      "forecast_karachi_20261103T150802Z.json",
-      "forecast_lahore_20261103T150803Z.json",
-      "forecast_jacobabad_20261103T150804Z.json"
+      "forecast_karachi_20261103T205931Z.json",
+      "forecast_lahore_20261103T205932Z.json",
+      "forecast_jacobabad_20261103T205932Z.json"
     ],
     "failed": []
   }
