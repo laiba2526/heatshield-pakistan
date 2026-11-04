@@ -1,10 +1,10 @@
 row_id,city,issue_date,target_date,horizon,pred,lo80,hi80,lo90,hi90,predicted_risk_level,upper90_risk_level,clim_target,issued_from_row_id
-pred-jacobabad-20261105-h1,jacobabad,2026-11-04,2026-11-05,1,32.87,31.26,34.48,30.61,35.12,Extreme Caution,Extreme Caution,31.26,jacobabad-20261104
-pred-karachi-20261105-h1,karachi,2026-11-04,2026-11-05,1,32.93,31.41,34.44,30.76,35.09,Extreme Caution,Extreme Caution,32.05,karachi-20261104
-pred-lahore-20261105-h1,lahore,2026-11-04,2026-11-05,1,28.02,26.02,30.01,24.79,31.25,Caution,Caution,27.29,lahore-20261104
-pred-jacobabad-20261106-h2,jacobabad,2026-11-04,2026-11-06,2,32.35,30.13,34.58,29.24,35.46,Extreme Caution,Extreme Caution,31.02,jacobabad-20261104
-pred-karachi-20261106-h2,karachi,2026-11-04,2026-11-06,2,32.8,30.84,34.76,30.0,35.6,Extreme Caution,Extreme Caution,31.89,karachi-20261104
-pred-lahore-20261106-h2,lahore,2026-11-04,2026-11-06,2,27.44,24.58,30.29,23.65,31.22,Caution,Caution,27.03,lahore-20261104
-pred-jacobabad-20261107-h3,jacobabad,2026-11-04,2026-11-07,3,31.76,29.2,34.32,27.83,35.7,Caution,Extreme Caution,30.72,jacobabad-20261104
-pred-karachi-20261107-h3,karachi,2026-11-04,2026-11-07,3,32.54,30.4,34.68,29.53,35.55,Extreme Caution,Extreme Caution,31.8,karachi-20261104
-pred-lahore-20261107-h3,lahore,2026-11-04,2026-11-07,3,26.84,23.59,30.09,22.61,31.07,Caution,Caution,26.72,lahore-20261104
+pred-jacobabad-20261105-h1,jacobabad,2026-11-04,2026-11-05,1,32.88,31.28,34.49,30.63,35.14,Extreme Caution,Extreme Caution,31.26,jacobabad-20261104
+pred-karachi-20261105-h1,karachi,2026-11-04,2026-11-05,1,32.88,31.37,34.4,30.72,35.04,Extreme Caution,Extreme Caution,32.05,karachi-20261104
+pred-lahore-20261105-h1,lahore,2026-11-04,2026-11-05,1,28.04,26.04,30.03,24.81,31.27,Caution,Caution,27.29,lahore-20261104
+pred-jacobabad-20261106-h2,jacobabad,2026-11-04,2026-11-06,2,32.37,30.14,34.59,29.26,35.48,Extreme Caution,Extreme Caution,31.02,jacobabad-20261104
+pred-karachi-20261106-h2,karachi,2026-11-04,2026-11-06,2,32.74,30.77,34.7,29.93,35.54,Extreme Caution,Extreme Caution,31.89,karachi-20261104
+pred-lahore-20261106-h2,lahore,2026-11-04,2026-11-06,2,27.45,24.6,30.31,23.67,31.24,Caution,Caution,27.03,lahore-20261104
+pred-jacobabad-20261107-h3,jacobabad,2026-11-04,2026-11-07,3,31.77,29.21,34.33,27.84,35.7,Caution,Extreme Caution,30.72,jacobabad-20261104
+pred-karachi-20261107-h3,karachi,2026-11-04,2026-11-07,3,32.48,30.34,34.62,29.46,35.49,Extreme Caution,Extreme Caution,31.8,karachi-20261104
+pred-lahore-20261107-h3,lahore,2026-11-04,2026-11-07,3,26.86,23.61,30.11,22.63,31.09,Caution,Caution,26.72,lahore-20261104
