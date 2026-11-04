@@ -1859,7 +1859,7 @@ jacobabad-20261031,jacobabad,2026-10-31,34.0,21.9,27.35,38.42,22,11.23,1.35,32.2
 jacobabad-20261101,jacobabad,2026-11-01,34.9,20.1,27.3,34.29,17,9.12,0.73,32.82,26.53,0,24,0,24,open_meteo_recent,1.0,True,Extreme Caution,ok
 jacobabad-20261102,jacobabad,2026-11-02,35.2,20.6,27.38,27.04,13,5.63,1.15,32.64,26.47,0,24,0,24,open_meteo_recent,1.0,True,Extreme Caution,ok
 jacobabad-20261103,jacobabad,2026-11-03,34.7,22.1,27.72,35.04,20,10.14,1.73,32.72,27.03,0,24,0,24,open_meteo_recent,1.0,True,Extreme Caution,ok
-jacobabad-20261104,jacobabad,2026-11-04,,,22.78,44.33,41,10.0,1.07,,,0,6,0,6,open_meteo_recent,0.25,False,Unknown,incomplete
+jacobabad-20261104,jacobabad,2026-11-04,,,25.75,38.43,18,9.74,1.34,,,0,14,0,14,open_meteo_recent,0.58,False,Unknown,incomplete
 karachi-20211001,karachi,2021-10-01,,,27.18,86.37,83,24.68,9.79,,,0,19,0,19,open_meteo_archive,0.79,False,Unknown,incomplete
 karachi-20211002,karachi,2021-10-02,28.5,26.2,27.42,87.67,82,25.2,5.29,34.22,31.03,0,24,0,24,open_meteo_archive,1.0,True,Extreme Caution,ok
 karachi-20211003,karachi,2021-10-03,29.5,26.6,27.87,86.67,76,25.4,4.61,35.43,32.65,0,24,0,24,open_meteo_archive,1.0,True,Extreme Caution,ok
@@ -3720,7 +3720,7 @@ karachi-20261031,karachi,2026-10-31,34.7,24.9,29.04,36.17,21,11.8,2.21,32.83,28.
 karachi-20261101,karachi,2026-11-01,33.2,24.4,28.4,46.04,24,14.83,2.17,32.0,28.12,0,24,0,24,open_meteo_recent,1.0,True,Caution,ok
 karachi-20261102,karachi,2026-11-02,31.2,22.7,26.91,78.67,60,22.67,1.95,37.56,28.5,0,24,0,24,open_meteo_recent,1.0,True,Extreme Caution,ok
 karachi-20261103,karachi,2026-11-03,33.4,22.3,27.5,60.54,27,17.38,2.01,32.69,27.19,0,24,0,24,open_meteo_recent,1.0,True,Extreme Caution,ok
-karachi-20261104,karachi,2026-11-04,,,23.68,70.5,64,18.0,2.12,,,0,6,0,6,open_meteo_recent,0.25,False,Unknown,incomplete
+karachi-20261104,karachi,2026-11-04,,,26.1,55.5,24,15.51,1.84,,,0,14,0,14,open_meteo_recent,0.58,False,Unknown,incomplete
 lahore-20211001,lahore,2021-10-01,,,29.85,74.05,57,24.49,1.43,,,2,19,0,19,open_meteo_archive,0.79,False,Unknown,incomplete
 lahore-20211002,lahore,2021-10-02,32.9,24.8,28.57,77.5,57,24.0,1.52,38.24,31.83,0,24,0,24,open_meteo_archive,1.0,True,Extreme Caution,ok
 lahore-20211003,lahore,2021-10-03,34.2,25.4,29.36,74.29,50,23.95,1.61,42.08,33.02,1,24,0,24,open_meteo_archive,1.0,True,Danger,ok
@@ -5581,4 +5581,4 @@ lahore-20261031,lahore,2026-10-31,28.1,18.4,23.15,68.5,45,16.6,1.26,28.13,23.18,
 lahore-20261101,lahore,2026-11-01,27.8,18.6,23.07,69.04,49,16.75,0.96,28.15,23.16,0,24,0,24,open_meteo_recent,1.0,True,Caution,ok
 lahore-20261102,lahore,2026-11-02,28.2,18.3,23.3,69.29,48,17.02,0.94,28.58,23.42,0,24,0,24,open_meteo_recent,1.0,True,Caution,ok
 lahore-20261103,lahore,2026-11-03,28.5,18.6,23.18,66.33,42,16.12,1.22,28.28,23.18,0,24,0,24,open_meteo_recent,1.0,True,Caution,ok
-lahore-20261104,lahore,2026-11-04,,,19.67,81.0,76,16.32,0.97,,,0,6,0,6,open_meteo_recent,0.25,False,Unknown,incomplete
+lahore-20261104,lahore,2026-11-04,,,21.86,71.71,43,16.1,0.72,,,0,14,0,14,open_meteo_recent,0.58,False,Unknown,incomplete
