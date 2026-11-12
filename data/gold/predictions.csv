@@ -1,10 +1,10 @@
 row_id,city,issue_date,target_date,horizon,pred,lo80,hi80,lo90,hi90,predicted_risk_level,upper90_risk_level,clim_target,issued_from_row_id
 pred-jacobabad-20261112-h1,jacobabad,2026-11-11,2026-11-12,1,31.99,30.38,33.6,29.74,34.25,Caution,Extreme Caution,29.07,jacobabad-20261111
-pred-karachi-20261112-h1,karachi,2026-11-11,2026-11-12,1,31.23,29.72,32.75,29.07,33.4,Caution,Extreme Caution,30.47,karachi-20261111
-pred-lahore-20261112-h1,lahore,2026-11-11,2026-11-12,1,28.02,26.03,30.02,24.79,31.25,Caution,Caution,25.42,lahore-20261111
+pred-karachi-20261112-h1,karachi,2026-11-11,2026-11-12,1,31.24,29.72,32.76,29.08,33.4,Caution,Extreme Caution,30.47,karachi-20261111
+pred-lahore-20261112-h1,lahore,2026-11-11,2026-11-12,1,28.03,26.03,30.02,24.8,31.26,Caution,Caution,25.42,lahore-20261111
 pred-jacobabad-20261113-h2,jacobabad,2026-11-11,2026-11-13,2,31.24,29.01,33.47,28.13,34.35,Caution,Extreme Caution,28.74,jacobabad-20261111
-pred-karachi-20261113-h2,karachi,2026-11-11,2026-11-13,2,31.08,29.12,33.04,28.28,33.88,Caution,Extreme Caution,30.28,karachi-20261111
-pred-lahore-20261113-h2,lahore,2026-11-11,2026-11-13,2,27.11,24.26,29.97,23.33,30.9,Caution,Caution,25.17,lahore-20261111
+pred-karachi-20261113-h2,karachi,2026-11-11,2026-11-13,2,31.09,29.13,33.05,28.29,33.89,Caution,Extreme Caution,30.28,karachi-20261111
+pred-lahore-20261113-h2,lahore,2026-11-11,2026-11-13,2,27.12,24.27,29.98,23.33,30.91,Caution,Caution,25.17,lahore-20261111
 pred-jacobabad-20261114-h3,jacobabad,2026-11-11,2026-11-14,3,30.57,28.01,33.13,26.64,34.5,Caution,Extreme Caution,28.52,jacobabad-20261111
-pred-karachi-20261114-h3,karachi,2026-11-11,2026-11-14,3,30.76,28.62,32.89,27.74,33.77,Caution,Extreme Caution,30.12,karachi-20261111
-pred-lahore-20261114-h3,lahore,2026-11-11,2026-11-14,3,26.31,23.06,29.56,22.08,30.54,Low,Caution,24.94,lahore-20261111
+pred-karachi-20261114-h3,karachi,2026-11-11,2026-11-14,3,30.76,28.62,32.9,27.75,33.77,Caution,Extreme Caution,30.12,karachi-20261111
+pred-lahore-20261114-h3,lahore,2026-11-11,2026-11-14,3,26.31,23.06,29.57,22.08,30.54,Low,Caution,24.94,lahore-20261111
