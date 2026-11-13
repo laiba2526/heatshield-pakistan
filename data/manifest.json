@@ -3698,5 +3698,27 @@
     "downloaded_at_utc": "20261113T002403Z",
     "file": "data/bronze/open_meteo/forecast_jacobabad_20261113T002403Z.json",
     "sha256": "97c8fa8a0e3b43a80d2117de682e2aa7991306dbdcba1d097862e440d966d5fa"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "forecast",
+    "city": "lahore",
+    "licence": "CC BY 4.0 - Open-Meteo.com (https://open-meteo.com/en/license); free API for non-commercial use per https://open-meteo.com/en/terms",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=31.5497&longitude=74.3436&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&past_days=14&forecast_days=4",
+    "downloaded_at_utc": "20261113T075910Z",
+    "file": "data/bronze/open_meteo/forecast_lahore_20261113T075910Z.json",
+    "sha256": "30d150cce0a92daeb62e0d693ba1b7e5d1ee6e776101030f488fc90b77fb9c0f"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "forecast",
+    "city": "jacobabad",
+    "licence": "CC BY 4.0 - Open-Meteo.com (https://open-meteo.com/en/license); free API for non-commercial use per https://open-meteo.com/en/terms",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=28.2769&longitude=68.4514&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&past_days=14&forecast_days=4",
+    "downloaded_at_utc": "20261113T075911Z",
+    "file": "data/bronze/open_meteo/forecast_jacobabad_20261113T075911Z.json",
+    "sha256": "ae08de7f969f2c29431bf4a702ae104150bf40edf07bf3d0057bc9e3c848a9ed"
   }
 ]
