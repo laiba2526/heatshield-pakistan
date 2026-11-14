@@ -1868,8 +1868,8 @@ jacobabad-20261109,jacobabad,2026-11-09,35.4,23.0,28.2,37.17,21.0,11.4,2.23,33.7
 jacobabad-20261110,jacobabad,2026-11-10,34.3,22.1,27.7,39.67,23.0,12.05,1.59,32.63,27.16,0,24,0,24,open_meteo_recent,1.0,True,Extreme Caution,ok
 jacobabad-20261111,jacobabad,2026-11-11,34.9,19.2,27.21,34.71,18.0,9.0,1.37,32.82,26.41,0,24,0,24,open_meteo_recent,1.0,True,Extreme Caution,ok
 jacobabad-20261112,jacobabad,2026-11-12,34.7,20.3,27.21,25.62,14.0,5.26,1.9,32.22,26.35,0,24,0,24,open_meteo_recent,1.0,True,Extreme Caution,ok
-jacobabad-20261113,jacobabad,2026-11-13,32.3,20.9,26.29,41.25,29.0,11.74,1.71,31.18,25.97,0,24,0,24,open_meteo_recent,1.0,True,Caution,ok
-jacobabad-20261114,jacobabad,2026-11-14,,,21.97,60.33,58.0,13.87,1.65,,,0,3,0,3,open_meteo_recent,0.12,False,Unknown,incomplete
+jacobabad-20261113,jacobabad,2026-11-13,32.3,20.9,26.29,41.29,29.0,11.76,1.72,31.18,25.97,0,24,0,24,open_meteo_recent,1.0,True,Caution,ok
+jacobabad-20261114,jacobabad,2026-11-14,,,21.42,57.12,45.0,12.46,1.85,,,0,8,0,8,open_meteo_recent,0.33,False,Unknown,incomplete
 karachi-20211001,karachi,2021-10-01,,,27.18,86.37,83.0,24.68,9.79,,,0,19,0,19,open_meteo_archive,0.79,False,Unknown,incomplete
 karachi-20211002,karachi,2021-10-02,28.5,26.2,27.42,87.67,82.0,25.2,5.29,34.22,31.03,0,24,0,24,open_meteo_archive,1.0,True,Extreme Caution,ok
 karachi-20211003,karachi,2021-10-03,29.5,26.6,27.87,86.67,76.0,25.4,4.61,35.43,32.65,0,24,0,24,open_meteo_archive,1.0,True,Extreme Caution,ok

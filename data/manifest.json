@@ -3786,5 +3786,16 @@
     "downloaded_at_utc": "20261113T223752Z",
     "file": "data/bronze/open_meteo/forecast_jacobabad_20261113T223752Z.json",
     "sha256": "262a4172cc12064614ad5418d3b85d2165661e3a21f1c7c6b268d7ca6727dd3e"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "forecast",
+    "city": "jacobabad",
+    "licence": "CC BY 4.0 - Open-Meteo.com (https://open-meteo.com/en/license); free API for non-commercial use per https://open-meteo.com/en/terms",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=28.2769&longitude=68.4514&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&past_days=14&forecast_days=4",
+    "downloaded_at_utc": "20261114T031802Z",
+    "file": "data/bronze/open_meteo/forecast_jacobabad_20261114T031802Z.json",
+    "sha256": "67d8ce28ce5ecbc2a373cc3bf7c8f047ba06578783d50b9131128cb3660802e5"
   }
 ]
