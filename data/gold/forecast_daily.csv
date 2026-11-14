@@ -1,9 +1,9 @@
 row_id,city,date,tmax_c,tmin_c,tmean_c,rh_mean_pct,rh_min_pct,dew_point_mean_c,wind_mean_ms,hi_max_c,hi_mean_c,hours_hi_ge_danger,valid_hours,filled_hours,hours,sources,data_completeness,complete_day,risk_level,qc_status,issued_utc
-nwp-jacobabad-20261114-20261114T031802Z,jacobabad,2026-11-14,31.2,20.1,25.22,46.54,29.0,12.42,1.91,29.94,24.91,0,24,0,24,open_meteo_forecast+open_meteo_recent,1.0,True,Caution,ok,20261114T031802Z
-nwp-jacobabad-20261115-20261114T031802Z,jacobabad,2026-11-15,31.5,18.2,24.31,13.08,6.0,-7.61,2.04,28.68,23.51,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261114T031802Z
-nwp-jacobabad-20261116-20261114T031802Z,jacobabad,2026-11-16,30.1,16.4,22.33,36.67,19.0,5.85,1.19,28.35,21.96,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261114T031802Z
-nwp-jacobabad-20261117-20261114T031802Z,jacobabad,2026-11-17,30.6,15.4,22.39,32.79,15.0,4.28,1.26,28.65,21.92,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261114T031802Z
-nwp-jacobabad-20261118-20261114T031802Z,jacobabad,2026-11-18,,,17.78,41.8,40.0,4.6,1.88,,,0,5,0,5,open_meteo_forecast,0.21,False,Unknown,incomplete,20261114T031802Z
+nwp-jacobabad-20261114-20261114T171017Z,jacobabad,2026-11-14,31.4,20.1,25.38,45.25,28.0,12.11,1.84,30.06,25.04,0,24,0,24,open_meteo_forecast+open_meteo_recent,1.0,True,Caution,ok,20261114T171017Z
+nwp-jacobabad-20261115-20261114T171017Z,jacobabad,2026-11-15,31.5,18.4,24.17,14.25,7.0,-6.44,1.97,28.84,23.41,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261114T171017Z
+nwp-jacobabad-20261116-20261114T171017Z,jacobabad,2026-11-16,30.2,16.1,22.2,38.0,21.0,6.3,1.23,28.44,21.84,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261114T171017Z
+nwp-jacobabad-20261117-20261114T171017Z,jacobabad,2026-11-17,30.5,14.9,22.12,34.83,15.0,4.74,1.27,28.59,21.67,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261114T171017Z
+nwp-jacobabad-20261118-20261114T171017Z,jacobabad,2026-11-18,,,18.0,42.2,40.0,5.04,2.09,,,0,5,0,5,open_meteo_forecast,0.21,False,Unknown,incomplete,20261114T171017Z
 nwp-karachi-20261114-20261113T223751Z,karachi,2026-11-14,29.6,23.9,26.75,76.92,60.0,22.16,1.78,32.27,27.87,0,24,0,24,open_meteo_forecast+open_meteo_recent,1.0,True,Extreme Caution,ok,20261113T223751Z
 nwp-karachi-20261115-20261113T223751Z,karachi,2026-11-15,31.2,21.5,26.05,72.04,42.0,19.97,1.7,32.51,26.45,0,24,0,24,open_meteo_forecast,1.0,True,Extreme Caution,ok,20261113T223751Z
 nwp-karachi-20261116-20261113T223751Z,karachi,2026-11-16,32.0,21.8,26.57,49.42,24.0,14.15,2.13,30.82,26.24,0,24,0,24,open_meteo_forecast,1.0,True,Caution,ok,20261113T223751Z
