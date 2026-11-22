@@ -4512,5 +4512,38 @@
     "downloaded_at_utc": "20261122T113343Z",
     "file": "data/bronze/open_meteo/forecast_jacobabad_20261122T113343Z.json",
     "sha256": "04d42c4aba54c32b5833e76914a11de361560a155a5369594450d4316897eec7"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "forecast",
+    "city": "karachi",
+    "licence": "CC BY 4.0 - Open-Meteo.com (https://open-meteo.com/en/license); free API for non-commercial use per https://open-meteo.com/en/terms",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=24.8607&longitude=67.0011&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&past_days=14&forecast_days=4",
+    "downloaded_at_utc": "20261122T194005Z",
+    "file": "data/bronze/open_meteo/forecast_karachi_20261122T194005Z.json",
+    "sha256": "5dfdb0f8fc3a29a7984dfb2980f22b251a6a74daf3c7270e0d44ebadf7b4e571"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "forecast",
+    "city": "lahore",
+    "licence": "CC BY 4.0 - Open-Meteo.com (https://open-meteo.com/en/license); free API for non-commercial use per https://open-meteo.com/en/terms",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=31.5497&longitude=74.3436&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&past_days=14&forecast_days=4",
+    "downloaded_at_utc": "20261122T194005Z",
+    "file": "data/bronze/open_meteo/forecast_lahore_20261122T194005Z.json",
+    "sha256": "b7e1bd9681464375a610dd512a0ffd40ce79568dd1ae72d053599f8c2b8042f7"
+  },
+  {
+    "source": "Open-Meteo",
+    "publisher": "Open-Meteo.com",
+    "kind": "forecast",
+    "city": "jacobabad",
+    "licence": "CC BY 4.0 - Open-Meteo.com (https://open-meteo.com/en/license); free API for non-commercial use per https://open-meteo.com/en/terms",
+    "request_url": "https://api.open-meteo.com/v1/forecast?latitude=28.2769&longitude=68.4514&hourly=temperature_2m%2Crelative_humidity_2m%2Cdew_point_2m%2Cwind_speed_10m&timezone=UTC&past_days=14&forecast_days=4",
+    "downloaded_at_utc": "20261122T194005Z",
+    "file": "data/bronze/open_meteo/forecast_jacobabad_20261122T194005Z.json",
+    "sha256": "8619749c78dfd8d375055651081d5e9a63434a1e16e704f7dc5511a985fd2d0e"
   }
 ]
