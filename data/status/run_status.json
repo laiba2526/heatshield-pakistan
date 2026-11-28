@@ -1,56 +1,63 @@
 {
-  "last_run_id": "20261128T015948Z",
-  "last_run_utc": "2026-11-28T01:59:53Z",
+  "last_run_id": "20261128T102715Z",
+  "last_run_utc": "2026-11-28T10:29:18Z",
   "last_run_status": "success",
   "last_run_error": null,
   "last_run_mode": "update",
   "gate1_passed": true,
   "gate2_passed": true,
-  "serving_run_id": "20261128T015948Z",
-  "last_success_run_id": "20261128T015948Z",
-  "last_success_utc": "2026-11-28T01:59:53Z",
+  "serving_run_id": "20261128T102715Z",
+  "last_success_run_id": "20261128T102715Z",
+  "last_success_utc": "2026-11-28T10:29:18Z",
   "freshness": {
     "karachi": {
       "last_observation_utc": "2026-11-28T00:00:00Z",
-      "observation_age_hours": 2.0,
+      "observation_age_hours": 10.5,
       "forecast_issued_utc": "2026-11-28T01:59:49Z",
-      "forecast_age_hours": 0.0,
-      "observations_stale": false,
-      "forecast_stale": false
+      "forecast_age_hours": 8.5,
+      "observations_stale": true,
+      "forecast_stale": true
     },
     "lahore": {
       "last_observation_utc": "2026-11-28T00:00:00Z",
-      "observation_age_hours": 2.0,
+      "observation_age_hours": 10.5,
       "forecast_issued_utc": "2026-11-28T01:59:49Z",
-      "forecast_age_hours": 0.0,
-      "observations_stale": false,
-      "forecast_stale": false
+      "forecast_age_hours": 8.5,
+      "observations_stale": true,
+      "forecast_stale": true
     },
     "jacobabad": {
-      "last_observation_utc": "2026-11-28T00:00:00Z",
-      "observation_age_hours": 2.0,
-      "forecast_issued_utc": "2026-11-28T01:59:49Z",
+      "last_observation_utc": "2026-11-28T09:00:00Z",
+      "observation_age_hours": 1.5,
+      "forecast_issued_utc": "2026-11-28T10:29:15Z",
       "forecast_age_hours": 0.0,
       "observations_stale": false,
       "forecast_stale": false
     }
   },
   "trusted_snapshot": {
-    "run_id": "20261128T015948Z",
+    "run_id": "20261128T102715Z",
     "gold_rows": 5655,
     "last_observation_utc": {
       "karachi": "2026-11-28T00:00:00Z",
       "lahore": "2026-11-28T00:00:00Z",
-      "jacobabad": "2026-11-28T00:00:00Z"
+      "jacobabad": "2026-11-28T09:00:00Z"
     }
   },
   "last_fetch": {
-    "utc": "2026-11-28T01:59:53Z",
+    "utc": "2026-11-28T10:29:18Z",
     "fetched": [
-      "forecast_karachi_20261128T015949Z.json",
-      "forecast_lahore_20261128T015949Z.json",
-      "forecast_jacobabad_20261128T015949Z.json"
+      "forecast_jacobabad_20261128T102915Z.json"
     ],
-    "failed": []
+    "failed": [
+      {
+        "city": "karachi",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=60)"
+      },
+      {
+        "city": "lahore",
+        "error": "ReadTimeout: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=60)"
+      }
+    ]
   }
 }
